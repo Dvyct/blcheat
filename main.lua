@@ -1,4 +1,4 @@
--- V.2.3
+-- V.2.4
 
 local BLSCRIPT = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -391,13 +391,13 @@ Button_16.TextSize = 14.000
 
 -- Scripts:
 
-local function LEJYUKG_fake_script() -- TextLabel.LocalScript 
+local function VIRCQT_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.Text = "Hello: " .. game.Players.LocalPlayer.Name 
 end
-coroutine.wrap(LEJYUKG_fake_script)()
-local function IMCXO_fake_script() -- Button.LocalScript 
+coroutine.wrap(VIRCQT_fake_script)()
+local function XORZ_fake_script() -- Button.LocalScript 
 	local script = Instance.new('LocalScript', Button)
 
 	local button = script.Parent 
@@ -411,8 +411,8 @@ local function IMCXO_fake_script() -- Button.LocalScript
 	
 	end)
 end
-coroutine.wrap(IMCXO_fake_script)()
-local function SUHIS_fake_script() -- Button_2.LocalScript 
+coroutine.wrap(XORZ_fake_script)()
+local function JUAT_fake_script() -- Button_2.LocalScript 
 	local script = Instance.new('LocalScript', Button_2)
 
 	local Button = script.Parent
@@ -444,9 +444,7 @@ local function SUHIS_fake_script() -- Button_2.LocalScript
 			cam.CameraType = Enum.CameraType.Scriptable
 	
 	
-			local sens = .3
-	
-			_G.Speed /= 10
+			local sens = .3 
 			if onMobile then sens *= 2 end
 	
 			local function renderStepped()
@@ -604,8 +602,8 @@ local function SUHIS_fake_script() -- Button_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(SUHIS_fake_script)()
-local function UCAAF_fake_script() -- Button_3.LocalScript 
+coroutine.wrap(JUAT_fake_script)()
+local function NXYWMXD_fake_script() -- Button_3.LocalScript 
 	local script = Instance.new('LocalScript', Button_3)
 
 	local Button = script.Parent
@@ -764,8 +762,8 @@ local function UCAAF_fake_script() -- Button_3.LocalScript
 	end)
 	
 end
-coroutine.wrap(UCAAF_fake_script)()
-local function YQZWKO_fake_script() -- Button_4.LocalScript 
+coroutine.wrap(NXYWMXD_fake_script)()
+local function CQBUI_fake_script() -- Button_4.LocalScript 
 	local script = Instance.new('LocalScript', Button_4)
 
 	local button = script.Parent 
@@ -783,8 +781,8 @@ local function YQZWKO_fake_script() -- Button_4.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(YQZWKO_fake_script)()
-local function ZCWYJPW_fake_script() -- Button_5.LocalScript 
+coroutine.wrap(CQBUI_fake_script)()
+local function QDAEVH_fake_script() -- Button_5.LocalScript 
 	local script = Instance.new('LocalScript', Button_5)
 
 	local Button = script.Parent
@@ -812,8 +810,8 @@ local function ZCWYJPW_fake_script() -- Button_5.LocalScript
 	end)
 	
 end
-coroutine.wrap(ZCWYJPW_fake_script)()
-local function EBTXOUL_fake_script() -- Button_6.LocalScript 
+coroutine.wrap(QDAEVH_fake_script)()
+local function DZCCS_fake_script() -- Button_6.LocalScript 
 	local script = Instance.new('LocalScript', Button_6)
 
 	local Button = script.Parent
@@ -840,8 +838,8 @@ local function EBTXOUL_fake_script() -- Button_6.LocalScript
 	end)
 	
 end
-coroutine.wrap(EBTXOUL_fake_script)()
-local function VUFL_fake_script() -- Button_7.LocalScript 
+coroutine.wrap(DZCCS_fake_script)()
+local function OTEJ_fake_script() -- Button_7.LocalScript 
 	local script = Instance.new('LocalScript', Button_7)
 
 	local button = script.Parent 
@@ -850,8 +848,8 @@ local function VUFL_fake_script() -- Button_7.LocalScript
 		_G.AimbotPart = "Head" 
 	end)
 end
-coroutine.wrap(VUFL_fake_script)()
-local function FYJYO_fake_script() -- Button_8.LocalScript 
+coroutine.wrap(OTEJ_fake_script)()
+local function EHRBTXG_fake_script() -- Button_8.LocalScript 
 	local script = Instance.new('LocalScript', Button_8)
 
 	local button = script.Parent 
@@ -860,8 +858,8 @@ local function FYJYO_fake_script() -- Button_8.LocalScript
 		_G.AimbotPart = "HumanoidRootPart" 
 	end)
 end
-coroutine.wrap(FYJYO_fake_script)()
-local function DZBY_fake_script() -- Button_9.LocalScript 
+coroutine.wrap(EHRBTXG_fake_script)()
+local function XEYTUWW_fake_script() -- Button_9.LocalScript 
 	local script = Instance.new('LocalScript', Button_9)
 
 	local button = script.Parent 
@@ -870,8 +868,8 @@ local function DZBY_fake_script() -- Button_9.LocalScript
 	   _G.Speed = _G.Speed + 0.1
 	end)
 end
-coroutine.wrap(DZBY_fake_script)()
-local function MIUB_fake_script() -- Button_10.LocalScript 
+coroutine.wrap(XEYTUWW_fake_script)()
+local function OHCM_fake_script() -- Button_10.LocalScript 
 	local script = Instance.new('LocalScript', Button_10)
 
 	local button = script.Parent 
@@ -880,8 +878,8 @@ local function MIUB_fake_script() -- Button_10.LocalScript
 		_G.Speed = _G.Speed - 0.1
 	end)
 end
-coroutine.wrap(MIUB_fake_script)()
-local function WBPZGC_fake_script() -- TextLabel_6.LocalScript 
+coroutine.wrap(OHCM_fake_script)()
+local function OJSRTOK_fake_script() -- TextLabel_6.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_6)
 
 	local Run = game:GetService("RunService")
@@ -889,8 +887,8 @@ local function WBPZGC_fake_script() -- TextLabel_6.LocalScript
 		script.Parent.Text = "Freecam Speed = " .. tostring(tonumber(_G.Speed))
 	end)
 end
-coroutine.wrap(WBPZGC_fake_script)()
-local function BGDM_fake_script() -- Button_11.LocalScript 
+coroutine.wrap(OJSRTOK_fake_script)()
+local function OJXDHD_fake_script() -- Button_11.LocalScript 
 	local script = Instance.new('LocalScript', Button_11)
 
 	local Button = script.Parent
@@ -904,6 +902,42 @@ local function BGDM_fake_script() -- Button_11.LocalScript
 	local function unactive()
 		Sense.teamSettings.enemy.enabled = false
 	end
+	local Run = game:GetService("RunService")
+	Run.RenderStepped:Connect(function()
+		if _G.Tracers == true then
+			Sense.teamSettings.enemy.tracer = true
+	else 
+			Sense.teamSettings.enemy.tracer = false
+	
+	end
+	
+	if _G.Boxes == true then
+			Sense.teamSettings.enemy.box3d = true
+	else 
+			Sense.teamSettings.enemy.box3d = false
+	end
+	
+	if _G.Names == true then
+			Sense.teamSettings.enemy.name = true
+	else
+			Sense.teamSettings.enemy.name = false
+	end
+	
+	if _G.HealthBar == true then
+			Sense.teamSettings.enemy.healthBar = true
+	else
+			Sense.teamSettings.enemy.healthBar = false
+	end
+	
+	if _G.Arrows == true then
+			Sense.teamSettings.enemy.offScreenArrow = true
+	else
+			Sense.teamSettings.enemy.offScreenArrow = false
+	end 
+	end)
+	
+	
+	
 	
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
@@ -918,8 +952,8 @@ local function BGDM_fake_script() -- Button_11.LocalScript
 	end)
 	
 end
-coroutine.wrap(BGDM_fake_script)()
-local function MJGLGFI_fake_script() -- Button_12.LocalScript 
+coroutine.wrap(OJXDHD_fake_script)()
+local function QZSQFP_fake_script() -- Button_12.LocalScript 
 	local script = Instance.new('LocalScript', Button_12)
 
 	local Button = script.Parent
@@ -927,11 +961,11 @@ local function MJGLGFI_fake_script() -- Button_12.LocalScript
 	local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 	
 	local function active()
-		Sense.teamSettings.enemy.box3d = true
+		_G.Boxes = true
 	end
 	
 	local function unactive()
-		Sense.teamSettings.enemy.box3d = false
+		_G.Boxes = false
 	end
 	
 	Button.MouseButton1Down:Connect(function()
@@ -947,8 +981,8 @@ local function MJGLGFI_fake_script() -- Button_12.LocalScript
 	end)
 	
 end
-coroutine.wrap(MJGLGFI_fake_script)()
-local function ACTNKRD_fake_script() -- Button_13.LocalScript 
+coroutine.wrap(QZSQFP_fake_script)()
+local function EVINDKZ_fake_script() -- Button_13.LocalScript 
 	local script = Instance.new('LocalScript', Button_13)
 
 	local Button = script.Parent
@@ -956,11 +990,11 @@ local function ACTNKRD_fake_script() -- Button_13.LocalScript
 	local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 	
 	local function active()
-		Sense.teamSettings.enemy.healthBar = true
+		_G.HealthBar = true
 	end
 	
 	local function unactive()
-		Sense.teamSettings.enemy.healthBar = false
+		_G.HealthBar = false
 	end
 	
 	Button.MouseButton1Down:Connect(function()
@@ -976,8 +1010,8 @@ local function ACTNKRD_fake_script() -- Button_13.LocalScript
 	end)
 	
 end
-coroutine.wrap(ACTNKRD_fake_script)()
-local function NKQB_fake_script() -- Button_14.LocalScript 
+coroutine.wrap(EVINDKZ_fake_script)()
+local function CPGZV_fake_script() -- Button_14.LocalScript 
 	local script = Instance.new('LocalScript', Button_14)
 
 	local Button = script.Parent
@@ -985,11 +1019,11 @@ local function NKQB_fake_script() -- Button_14.LocalScript
 	local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 	
 	local function active()
-		Sense.teamSettings.enemy.offScreenArrow = true
+		_G.Names = true
 	end
 	
 	local function unactive()
-		Sense.teamSettings.enemy.offScreenArrow = false
+		_G.Names = false
 	end
 	
 	Button.MouseButton1Down:Connect(function()
@@ -1005,8 +1039,8 @@ local function NKQB_fake_script() -- Button_14.LocalScript
 	end)
 	
 end
-coroutine.wrap(NKQB_fake_script)()
-local function GNTY_fake_script() -- Button_15.LocalScript 
+coroutine.wrap(CPGZV_fake_script)()
+local function BLXNKUV_fake_script() -- Button_15.LocalScript 
 	local script = Instance.new('LocalScript', Button_15)
 
 	local Button = script.Parent
@@ -1014,11 +1048,11 @@ local function GNTY_fake_script() -- Button_15.LocalScript
 	local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 	
 	local function active()
-		Sense.teamSettings.enemy.offScreenArrow = true
+		_G.Arrows = true
 	end
 	
 	local function unactive()
-		Sense.teamSettings.enemy.offScreenArrow = false
+		_G.Arrows = false
 	end
 	
 	Button.MouseButton1Down:Connect(function()
@@ -1034,8 +1068,8 @@ local function GNTY_fake_script() -- Button_15.LocalScript
 	end)
 	
 end
-coroutine.wrap(GNTY_fake_script)()
-local function XRHZTRJ_fake_script() -- Button_16.LocalScript 
+coroutine.wrap(BLXNKUV_fake_script)()
+local function OCMUBI_fake_script() -- Button_16.LocalScript 
 	local script = Instance.new('LocalScript', Button_16)
 
 	local Button = script.Parent
@@ -1043,11 +1077,11 @@ local function XRHZTRJ_fake_script() -- Button_16.LocalScript
 	local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 	
 	local function active()
-		Sense.teamSettings.enemy.tracer = true
+		_G.Tracers = true
 	end
 	
 	local function unactive()
-		Sense.teamSettings.enemy.tracer = false
+		_G.Tracers = false
 	end
 	
 	Button.MouseButton1Down:Connect(function()
@@ -1063,4 +1097,5 @@ local function XRHZTRJ_fake_script() -- Button_16.LocalScript
 	end)
 	
 end
-coroutine.wrap(XRHZTRJ_fake_script)()
+coroutine.wrap(OCMUBI_fake_script)()
+
