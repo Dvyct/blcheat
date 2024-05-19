@@ -1,4 +1,4 @@
--- V.2.2
+-- V.2.3
 
 local BLSCRIPT = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -12,7 +12,7 @@ local Button_3 = Instance.new("TextButton")
 local Button_4 = Instance.new("TextButton")
 local TextLabel_4 = Instance.new("TextLabel")
 local Button_5 = Instance.new("TextButton")
-local TextLabel_5 = Instance.new("TextLabel")a
+local TextLabel_5 = Instance.new("TextLabel")
 local Button_6 = Instance.new("TextButton")
 local Button_7 = Instance.new("TextButton")
 local Button_8 = Instance.new("TextButton")
@@ -391,13 +391,13 @@ Button_16.TextSize = 14.000
 
 -- Scripts:
 
-local function LYVF_fake_script() -- TextLabel.LocalScript 
+local function LEJYUKG_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.Text = "Hello: " .. game.Players.LocalPlayer.Name 
 end
-coroutine.wrap(LYVF_fake_script)()
-local function BFRFX_fake_script() -- Button.LocalScript 
+coroutine.wrap(LEJYUKG_fake_script)()
+local function IMCXO_fake_script() -- Button.LocalScript 
 	local script = Instance.new('LocalScript', Button)
 
 	local button = script.Parent 
@@ -411,8 +411,8 @@ local function BFRFX_fake_script() -- Button.LocalScript
 	
 	end)
 end
-coroutine.wrap(BFRFX_fake_script)()
-local function HYWWKMB_fake_script() -- Button_2.LocalScript 
+coroutine.wrap(IMCXO_fake_script)()
+local function SUHIS_fake_script() -- Button_2.LocalScript 
 	local script = Instance.new('LocalScript', Button_2)
 
 	local Button = script.Parent
@@ -479,7 +479,7 @@ local function HYWWKMB_fake_script() -- Button_2.LocalScript
 					cam.CFrame *= CFrame.new(Vector3.new(0, 0, _G.Speed))
 				end
 				if keysDown["Enum.KeyCode.D"] then
-					cam.CFrame *= CFrame.new(Vector3.new(speed, 0, 0))
+					cam.CFrame *= CFrame.new(Vector3.new(_G.Speed, 0, 0))
 				end
 			end
 	
@@ -604,8 +604,8 @@ local function HYWWKMB_fake_script() -- Button_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(HYWWKMB_fake_script)()
-local function EYLSRV_fake_script() -- Button_3.LocalScript 
+coroutine.wrap(SUHIS_fake_script)()
+local function UCAAF_fake_script() -- Button_3.LocalScript 
 	local script = Instance.new('LocalScript', Button_3)
 
 	local Button = script.Parent
@@ -665,7 +665,7 @@ local function EYLSRV_fake_script() -- Button_3.LocalScript
 				cam.CFrame *= CFrame.new(Vector3.new(0, 0, _G.Speed))
 			end
 			if keysDown["Enum.KeyCode.D"] then
-				cam.CFrame *= CFrame.new(Vector3.new(speed, 0, 0))
+				cam.CFrame *= CFrame.new(Vector3.new(_G.Speed, 0, 0))
 			end
 		end
 	
@@ -764,8 +764,8 @@ local function EYLSRV_fake_script() -- Button_3.LocalScript
 	end)
 	
 end
-coroutine.wrap(EYLSRV_fake_script)()
-local function NEIUA_fake_script() -- Button_4.LocalScript 
+coroutine.wrap(UCAAF_fake_script)()
+local function YQZWKO_fake_script() -- Button_4.LocalScript 
 	local script = Instance.new('LocalScript', Button_4)
 
 	local button = script.Parent 
@@ -783,8 +783,8 @@ local function NEIUA_fake_script() -- Button_4.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(NEIUA_fake_script)()
-local function RPFT_fake_script() -- Button_5.LocalScript 
+coroutine.wrap(YQZWKO_fake_script)()
+local function ZCWYJPW_fake_script() -- Button_5.LocalScript 
 	local script = Instance.new('LocalScript', Button_5)
 
 	local Button = script.Parent
@@ -812,8 +812,8 @@ local function RPFT_fake_script() -- Button_5.LocalScript
 	end)
 	
 end
-coroutine.wrap(RPFT_fake_script)()
-local function NPJDPFE_fake_script() -- Button_6.LocalScript 
+coroutine.wrap(ZCWYJPW_fake_script)()
+local function EBTXOUL_fake_script() -- Button_6.LocalScript 
 	local script = Instance.new('LocalScript', Button_6)
 
 	local Button = script.Parent
@@ -840,8 +840,8 @@ local function NPJDPFE_fake_script() -- Button_6.LocalScript
 	end)
 	
 end
-coroutine.wrap(NPJDPFE_fake_script)()
-local function BTDVVH_fake_script() -- Button_7.LocalScript 
+coroutine.wrap(EBTXOUL_fake_script)()
+local function VUFL_fake_script() -- Button_7.LocalScript 
 	local script = Instance.new('LocalScript', Button_7)
 
 	local button = script.Parent 
@@ -850,8 +850,8 @@ local function BTDVVH_fake_script() -- Button_7.LocalScript
 		_G.AimbotPart = "Head" 
 	end)
 end
-coroutine.wrap(BTDVVH_fake_script)()
-local function HMTS_fake_script() -- Button_8.LocalScript 
+coroutine.wrap(VUFL_fake_script)()
+local function FYJYO_fake_script() -- Button_8.LocalScript 
 	local script = Instance.new('LocalScript', Button_8)
 
 	local button = script.Parent 
@@ -860,37 +860,37 @@ local function HMTS_fake_script() -- Button_8.LocalScript
 		_G.AimbotPart = "HumanoidRootPart" 
 	end)
 end
-coroutine.wrap(HMTS_fake_script)()
-local function PGVXVSF_fake_script() -- Button_9.LocalScript 
+coroutine.wrap(FYJYO_fake_script)()
+local function DZBY_fake_script() -- Button_9.LocalScript 
 	local script = Instance.new('LocalScript', Button_9)
 
 	local button = script.Parent 
 	local RunService = game:GetService("RunService")
 	button.MouseButton1Down:Connect(function()
-	   _G.Speed = _G.Speed + 1
+	   _G.Speed = _G.Speed + 0.1
 	end)
 end
-coroutine.wrap(PGVXVSF_fake_script)()
-local function UTTBBCW_fake_script() -- Button_10.LocalScript 
+coroutine.wrap(DZBY_fake_script)()
+local function MIUB_fake_script() -- Button_10.LocalScript 
 	local script = Instance.new('LocalScript', Button_10)
 
 	local button = script.Parent 
 	local RunService = game:GetService("RunService")
 	button.MouseButton1Down:Connect(function()
-		_G.Speed = _G.Speed - 1
+		_G.Speed = _G.Speed - 0.1
 	end)
 end
-coroutine.wrap(UTTBBCW_fake_script)()
-local function DZBYEYS_fake_script() -- TextLabel_6.LocalScript 
+coroutine.wrap(MIUB_fake_script)()
+local function WBPZGC_fake_script() -- TextLabel_6.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_6)
 
 	local Run = game:GetService("RunService")
 	Run.RenderStepped:Connect(function()
-	script.Parent.Text = "Freecam Speed = " .. tostring(_G.Speed)
+		script.Parent.Text = "Freecam Speed = " .. tostring(tonumber(_G.Speed))
 	end)
 end
-coroutine.wrap(DZBYEYS_fake_script)()
-local function WIWE_fake_script() -- Button_11.LocalScript 
+coroutine.wrap(WBPZGC_fake_script)()
+local function BGDM_fake_script() -- Button_11.LocalScript 
 	local script = Instance.new('LocalScript', Button_11)
 
 	local Button = script.Parent
@@ -918,8 +918,8 @@ local function WIWE_fake_script() -- Button_11.LocalScript
 	end)
 	
 end
-coroutine.wrap(WIWE_fake_script)()
-local function YYDB_fake_script() -- Button_12.LocalScript 
+coroutine.wrap(BGDM_fake_script)()
+local function MJGLGFI_fake_script() -- Button_12.LocalScript 
 	local script = Instance.new('LocalScript', Button_12)
 
 	local Button = script.Parent
@@ -947,8 +947,8 @@ local function YYDB_fake_script() -- Button_12.LocalScript
 	end)
 	
 end
-coroutine.wrap(YYDB_fake_script)()
-local function ERJTP_fake_script() -- Button_13.LocalScript 
+coroutine.wrap(MJGLGFI_fake_script)()
+local function ACTNKRD_fake_script() -- Button_13.LocalScript 
 	local script = Instance.new('LocalScript', Button_13)
 
 	local Button = script.Parent
@@ -976,8 +976,8 @@ local function ERJTP_fake_script() -- Button_13.LocalScript
 	end)
 	
 end
-coroutine.wrap(ERJTP_fake_script)()
-local function GYLQO_fake_script() -- Button_14.LocalScript 
+coroutine.wrap(ACTNKRD_fake_script)()
+local function NKQB_fake_script() -- Button_14.LocalScript 
 	local script = Instance.new('LocalScript', Button_14)
 
 	local Button = script.Parent
@@ -1005,8 +1005,8 @@ local function GYLQO_fake_script() -- Button_14.LocalScript
 	end)
 	
 end
-coroutine.wrap(GYLQO_fake_script)()
-local function HFXJBV_fake_script() -- Button_15.LocalScript 
+coroutine.wrap(NKQB_fake_script)()
+local function GNTY_fake_script() -- Button_15.LocalScript 
 	local script = Instance.new('LocalScript', Button_15)
 
 	local Button = script.Parent
@@ -1034,8 +1034,8 @@ local function HFXJBV_fake_script() -- Button_15.LocalScript
 	end)
 	
 end
-coroutine.wrap(HFXJBV_fake_script)()
-local function SIEFTRH_fake_script() -- Button_16.LocalScript 
+coroutine.wrap(GNTY_fake_script)()
+local function XRHZTRJ_fake_script() -- Button_16.LocalScript 
 	local script = Instance.new('LocalScript', Button_16)
 
 	local Button = script.Parent
@@ -1063,4 +1063,4 @@ local function SIEFTRH_fake_script() -- Button_16.LocalScript
 	end)
 	
 end
-coroutine.wrap(SIEFTRH_fake_script)()
+coroutine.wrap(XRHZTRJ_fake_script)()
