@@ -223,7 +223,7 @@ local function PUBVGF_fake_script() -- Button_3.LocalScript
 		local sens = .3
 	
 		speed = 10
-		if onMobile then sens *= 2 end
+		if onMobile then sens = 2 end
 	
 		local function renderStepped()
 			if rotating then
