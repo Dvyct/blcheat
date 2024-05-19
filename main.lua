@@ -1,4 +1,4 @@
--- V2.1
+-- V.2.2
 
 local BLSCRIPT = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -12,7 +12,7 @@ local Button_3 = Instance.new("TextButton")
 local Button_4 = Instance.new("TextButton")
 local TextLabel_4 = Instance.new("TextLabel")
 local Button_5 = Instance.new("TextButton")
-local TextLabel_5 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")a
 local Button_6 = Instance.new("TextButton")
 local Button_7 = Instance.new("TextButton")
 local Button_8 = Instance.new("TextButton")
@@ -391,23 +391,28 @@ Button_16.TextSize = 14.000
 
 -- Scripts:
 
-local function CKCLH_fake_script() -- TextLabel.LocalScript 
+local function LYVF_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.Text = "Hello: " .. game.Players.LocalPlayer.Name 
 end
-coroutine.wrap(CKCLH_fake_script)()
-local function FSMH_fake_script() -- Button.LocalScript 
+coroutine.wrap(LYVF_fake_script)()
+local function BFRFX_fake_script() -- Button.LocalScript 
 	local script = Instance.new('LocalScript', Button)
 
 	local button = script.Parent 
 	local RunService = game:GetService("RunService")
+	local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
 	button.MouseButton1Down:Connect(function()
-	   button.Parent.Parent:Remove()
+	Sense.Unload() 
+	_G.AimbotEnabled = false
+	_G.StickyAimEnabled = false
+	button.Parent.Parent:Remove()
+	
 	end)
 end
-coroutine.wrap(FSMH_fake_script)()
-local function ZOOV_fake_script() -- Button_2.LocalScript 
+coroutine.wrap(BFRFX_fake_script)()
+local function HYWWKMB_fake_script() -- Button_2.LocalScript 
 	local script = Instance.new('LocalScript', Button_2)
 
 	local Button = script.Parent
@@ -599,8 +604,8 @@ local function ZOOV_fake_script() -- Button_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(ZOOV_fake_script)()
-local function UDKMDZC_fake_script() -- Button_3.LocalScript 
+coroutine.wrap(HYWWKMB_fake_script)()
+local function EYLSRV_fake_script() -- Button_3.LocalScript 
 	local script = Instance.new('LocalScript', Button_3)
 
 	local Button = script.Parent
@@ -759,8 +764,8 @@ local function UDKMDZC_fake_script() -- Button_3.LocalScript
 	end)
 	
 end
-coroutine.wrap(UDKMDZC_fake_script)()
-local function QAGUFPQ_fake_script() -- Button_4.LocalScript 
+coroutine.wrap(EYLSRV_fake_script)()
+local function NEIUA_fake_script() -- Button_4.LocalScript 
 	local script = Instance.new('LocalScript', Button_4)
 
 	local button = script.Parent 
@@ -778,8 +783,8 @@ local function QAGUFPQ_fake_script() -- Button_4.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(QAGUFPQ_fake_script)()
-local function ROQNZL_fake_script() -- Button_5.LocalScript 
+coroutine.wrap(NEIUA_fake_script)()
+local function RPFT_fake_script() -- Button_5.LocalScript 
 	local script = Instance.new('LocalScript', Button_5)
 
 	local Button = script.Parent
@@ -807,8 +812,8 @@ local function ROQNZL_fake_script() -- Button_5.LocalScript
 	end)
 	
 end
-coroutine.wrap(ROQNZL_fake_script)()
-local function CDTX_fake_script() -- Button_6.LocalScript 
+coroutine.wrap(RPFT_fake_script)()
+local function NPJDPFE_fake_script() -- Button_6.LocalScript 
 	local script = Instance.new('LocalScript', Button_6)
 
 	local Button = script.Parent
@@ -835,8 +840,8 @@ local function CDTX_fake_script() -- Button_6.LocalScript
 	end)
 	
 end
-coroutine.wrap(CDTX_fake_script)()
-local function SUATG_fake_script() -- Button_7.LocalScript 
+coroutine.wrap(NPJDPFE_fake_script)()
+local function BTDVVH_fake_script() -- Button_7.LocalScript 
 	local script = Instance.new('LocalScript', Button_7)
 
 	local button = script.Parent 
@@ -845,8 +850,8 @@ local function SUATG_fake_script() -- Button_7.LocalScript
 		_G.AimbotPart = "Head" 
 	end)
 end
-coroutine.wrap(SUATG_fake_script)()
-local function TGLBWX_fake_script() -- Button_8.LocalScript 
+coroutine.wrap(BTDVVH_fake_script)()
+local function HMTS_fake_script() -- Button_8.LocalScript 
 	local script = Instance.new('LocalScript', Button_8)
 
 	local button = script.Parent 
@@ -855,8 +860,8 @@ local function TGLBWX_fake_script() -- Button_8.LocalScript
 		_G.AimbotPart = "HumanoidRootPart" 
 	end)
 end
-coroutine.wrap(TGLBWX_fake_script)()
-local function ZPKUX_fake_script() -- Button_9.LocalScript 
+coroutine.wrap(HMTS_fake_script)()
+local function PGVXVSF_fake_script() -- Button_9.LocalScript 
 	local script = Instance.new('LocalScript', Button_9)
 
 	local button = script.Parent 
@@ -865,8 +870,8 @@ local function ZPKUX_fake_script() -- Button_9.LocalScript
 	   _G.Speed = _G.Speed + 1
 	end)
 end
-coroutine.wrap(ZPKUX_fake_script)()
-local function IQNS_fake_script() -- Button_10.LocalScript 
+coroutine.wrap(PGVXVSF_fake_script)()
+local function UTTBBCW_fake_script() -- Button_10.LocalScript 
 	local script = Instance.new('LocalScript', Button_10)
 
 	local button = script.Parent 
@@ -875,8 +880,8 @@ local function IQNS_fake_script() -- Button_10.LocalScript
 		_G.Speed = _G.Speed - 1
 	end)
 end
-coroutine.wrap(IQNS_fake_script)()
-local function FCLZ_fake_script() -- TextLabel_6.LocalScript 
+coroutine.wrap(UTTBBCW_fake_script)()
+local function DZBYEYS_fake_script() -- TextLabel_6.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_6)
 
 	local Run = game:GetService("RunService")
@@ -884,8 +889,8 @@ local function FCLZ_fake_script() -- TextLabel_6.LocalScript
 	script.Parent.Text = "Freecam Speed = " .. tostring(_G.Speed)
 	end)
 end
-coroutine.wrap(FCLZ_fake_script)()
-local function EVOLI_fake_script() -- Button_11.LocalScript 
+coroutine.wrap(DZBYEYS_fake_script)()
+local function WIWE_fake_script() -- Button_11.LocalScript 
 	local script = Instance.new('LocalScript', Button_11)
 
 	local Button = script.Parent
@@ -913,8 +918,8 @@ local function EVOLI_fake_script() -- Button_11.LocalScript
 	end)
 	
 end
-coroutine.wrap(EVOLI_fake_script)()
-local function ZOMTKPM_fake_script() -- Button_12.LocalScript 
+coroutine.wrap(WIWE_fake_script)()
+local function YYDB_fake_script() -- Button_12.LocalScript 
 	local script = Instance.new('LocalScript', Button_12)
 
 	local Button = script.Parent
@@ -942,8 +947,8 @@ local function ZOMTKPM_fake_script() -- Button_12.LocalScript
 	end)
 	
 end
-coroutine.wrap(ZOMTKPM_fake_script)()
-local function MBRBTSL_fake_script() -- Button_13.LocalScript 
+coroutine.wrap(YYDB_fake_script)()
+local function ERJTP_fake_script() -- Button_13.LocalScript 
 	local script = Instance.new('LocalScript', Button_13)
 
 	local Button = script.Parent
@@ -971,8 +976,8 @@ local function MBRBTSL_fake_script() -- Button_13.LocalScript
 	end)
 	
 end
-coroutine.wrap(MBRBTSL_fake_script)()
-local function XUDRG_fake_script() -- Button_14.LocalScript 
+coroutine.wrap(ERJTP_fake_script)()
+local function GYLQO_fake_script() -- Button_14.LocalScript 
 	local script = Instance.new('LocalScript', Button_14)
 
 	local Button = script.Parent
@@ -1000,8 +1005,8 @@ local function XUDRG_fake_script() -- Button_14.LocalScript
 	end)
 	
 end
-coroutine.wrap(XUDRG_fake_script)()
-local function ZBGL_fake_script() -- Button_15.LocalScript 
+coroutine.wrap(GYLQO_fake_script)()
+local function HFXJBV_fake_script() -- Button_15.LocalScript 
 	local script = Instance.new('LocalScript', Button_15)
 
 	local Button = script.Parent
@@ -1029,8 +1034,8 @@ local function ZBGL_fake_script() -- Button_15.LocalScript
 	end)
 	
 end
-coroutine.wrap(ZBGL_fake_script)()
-local function HEMIDRT_fake_script() -- Button_16.LocalScript 
+coroutine.wrap(HFXJBV_fake_script)()
+local function SIEFTRH_fake_script() -- Button_16.LocalScript 
 	local script = Instance.new('LocalScript', Button_16)
 
 	local Button = script.Parent
@@ -1058,4 +1063,4 @@ local function HEMIDRT_fake_script() -- Button_16.LocalScript
 	end)
 	
 end
-coroutine.wrap(HEMIDRT_fake_script)()
+coroutine.wrap(SIEFTRH_fake_script)()
