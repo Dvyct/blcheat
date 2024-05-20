@@ -1,4 +1,5 @@
--- V.2.7
+-- V.2.8
+
 local BLSCRIPT = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local Assets = Instance.new("Folder")
@@ -39,7 +40,7 @@ local UIGradient = Instance.new("UIGradient")
 --Properties:
 
 BLSCRIPT.Name = "BLSCRIPT"
-BLSCRIPT.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+BLSCRIPT.Parent = game.ReplicatedStorage
 BLSCRIPT.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
@@ -443,35 +444,35 @@ UIGradient.Parent = Main
 
 -- Scripts:
 
-local function RIJAJM_fake_script() -- TextLabel.LocalScript 
+local function AARNWGC_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.Text = "Hello: " .. game.Players.LocalPlayer.Name 
 end
-coroutine.wrap(RIJAJM_fake_script)()
-local function GLJYOFF_fake_script() -- Button.LocalScript 
+coroutine.wrap(AARNWGC_fake_script)()
+local function EOHBL_fake_script() -- Button.LocalScript 
 	local script = Instance.new('LocalScript', Button)
 
 	local button = script.Parent 
 	local RunService = game:GetService("RunService")
 	button.MouseButton1Down:Connect(function()
-	_G.Destroy = true
-	_G.AimbotEnabled = false
-	_G.StickyAimEnabled = false
-	button.Parent.Parent:Remove()
-	
+		_G.Destroy = true
+		_G.AimbotEnabled = false
+		_G.StickyAimEnabled = false
+		button.Parent.Parent:Remove()
+
 	end)
 end
-coroutine.wrap(GLJYOFF_fake_script)()
-local function AARWZGR_fake_script() -- Button_2.LocalScript 
+coroutine.wrap(EOHBL_fake_script)()
+local function OVKNFVT_fake_script() -- Button_2.LocalScript 
 	local script = Instance.new('LocalScript', Button_2)
 
 	local button = script.Parent 
 	local RunService = game:GetService("RunService")
 	button.MouseButton1Down:Connect(function()
 		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/main/UniversalSkeleton.lua"))()
-	
-	
+
+
 		local Skeletons = {}
 		for _, Player in next, game.Players:GetChildren() do
 			table.insert(Skeletons, Library:NewSkeleton(Player, true));
@@ -481,8 +482,8 @@ local function AARWZGR_fake_script() -- Button_2.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(AARWZGR_fake_script)()
-local function GSHTS_fake_script() -- Button_3.LocalScript 
+coroutine.wrap(OVKNFVT_fake_script)()
+local function KMTHFQC_fake_script() -- Button_3.LocalScript 
 	local script = Instance.new('LocalScript', Button_3)
 
 	local button = script.Parent 
@@ -491,8 +492,8 @@ local function GSHTS_fake_script() -- Button_3.LocalScript
 		_G.AimbotPart = "Head" 
 	end)
 end
-coroutine.wrap(GSHTS_fake_script)()
-local function VBAOGF_fake_script() -- Button_4.LocalScript 
+coroutine.wrap(KMTHFQC_fake_script)()
+local function SOTYXSO_fake_script() -- Button_4.LocalScript 
 	local script = Instance.new('LocalScript', Button_4)
 
 	local button = script.Parent 
@@ -501,22 +502,22 @@ local function VBAOGF_fake_script() -- Button_4.LocalScript
 		_G.AimbotPart = "HumanoidRootPart" 
 	end)
 end
-coroutine.wrap(VBAOGF_fake_script)()
-local function GNKAQ_fake_script() -- Button_5.LocalScript 
+coroutine.wrap(SOTYXSO_fake_script)()
+local function QMNFI_fake_script() -- Button_5.LocalScript 
 	local script = Instance.new('LocalScript', Button_5)
 
 	local Button = script.Parent
 	local toggleactive = true
 	local ESPConnections = {}
 	_G.Speed = 3
-	
+
 	local function active()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 		local Button = script.Parent
 		local toggleactive = true
 		local ESPConnections = {}
 		_G.Speed = 3
-	
+
 		local function active()
 			local cam = workspace.CurrentCamera
 			local UIS = game:GetService("UserInputService")
@@ -528,15 +529,15 @@ local function GNKAQ_fake_script() -- Button_5.LocalScript
 			local inputBeganConnection
 			local inputEndedConnection
 			local touchMovedConnection
-	
+
 			if not game:IsLoaded() then game.Loaded:Wait() end
-	
+
 			cam.CameraType = Enum.CameraType.Scriptable
-	
-	
+
+
 			local sens = .3 
 			if onMobile then sens *= 2 end
-	
+
 			local function renderStepped()
 				if rotating then
 					local delta = UIS:GetMouseDelta()
@@ -556,7 +557,7 @@ local function GNKAQ_fake_script() -- Button_5.LocalScript
 				else
 					UIS.MouseBehavior = Enum.MouseBehavior.Default
 				end
-	
+
 				if keysDown["Enum.KeyCode.W"] then
 					cam.CFrame *= CFrame.new(Vector3.new(0, 0, -_G.Speed))
 				end
@@ -570,11 +571,11 @@ local function GNKAQ_fake_script() -- Button_5.LocalScript
 					cam.CFrame *= CFrame.new(Vector3.new(_G.Speed, 0, 0))
 				end
 			end
-	
+
 			renderStepConnection = RS.RenderStepped:Connect(renderStepped)
-	
+
 			local validKeys = {"Enum.KeyCode.W", "Enum.KeyCode.A", "Enum.KeyCode.S", "Enum.KeyCode.D"}
-	
+
 			inputBeganConnection = UIS.InputBegan:Connect(function(Input)
 				for i, key in pairs(validKeys) do
 					if key == tostring(Input.KeyCode) then
@@ -590,7 +591,7 @@ local function GNKAQ_fake_script() -- Button_5.LocalScript
 					end
 				end
 			end)
-	
+
 			inputEndedConnection = UIS.InputEnded:Connect(function(Input)
 				for key, v in pairs(keysDown) do
 					if key == tostring(Input.KeyCode) then
@@ -610,7 +611,7 @@ local function GNKAQ_fake_script() -- Button_5.LocalScript
 					end
 				end
 			end)
-	
+
 			touchMovedConnection = UIS.TouchMoved:Connect(function(input)
 				if touchPos then
 					if input.Position.X < cam.ViewportSize.X / 2 then
@@ -634,25 +635,25 @@ local function GNKAQ_fake_script() -- Button_5.LocalScript
 					end
 				end
 			end)
-	
+
 			-- Store connections in ESPConnections for later disconnection
 			table.insert(ESPConnections, renderStepConnection)
 			table.insert(ESPConnections, inputBeganConnection)
 			table.insert(ESPConnections, inputEndedConnection)
 			table.insert(ESPConnections, touchMovedConnection)
 		end
-	
+
 		local function unactive()
 			for _, connection in ipairs(ESPConnections) do
 				connection:Disconnect()
 			end
 			ESPConnections = {}
-	
+
 			local cam = workspace.CurrentCamera
 			cam.CameraType = Enum.CameraType.Custom
 			cam.FieldOfView = 70  -- Reset to default FOV
 		end
-	
+
 		Button.MouseButton1Down:Connect(function()
 			if toggleactive then
 				toggleactive = false
@@ -664,21 +665,21 @@ local function GNKAQ_fake_script() -- Button_5.LocalScript
 				Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 			end
 		end)
-	
+
 	end
-	
+
 	local function unactive()
 		for _, connection in ipairs(ESPConnections) do
 			connection:Disconnect()
 		end
 		ESPConnections = {}
-	
+
 		local cam = workspace.CurrentCamera
 		cam.CameraType = Enum.CameraType.Custom
 		cam.FieldOfView = 70  -- Reset to default FOV
-	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 	end
-	
+
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -690,17 +691,17 @@ local function GNKAQ_fake_script() -- Button_5.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-	
+
 end
-coroutine.wrap(GNKAQ_fake_script)()
-local function NDNJ_fake_script() -- Button_6.LocalScript 
+coroutine.wrap(QMNFI_fake_script)()
+local function XDSIKRJ_fake_script() -- Button_6.LocalScript 
 	local script = Instance.new('LocalScript', Button_6)
 
 	local Button = script.Parent
 	local toggleactive = true
 	local ESPConnections = {}
 	_G.Speed = 3
-	
+
 	local function active()
 		local cam = workspace.CurrentCamera
 		local UIS = game:GetService("UserInputService")
@@ -712,17 +713,17 @@ local function NDNJ_fake_script() -- Button_6.LocalScript
 		local inputBeganConnection
 		local inputEndedConnection
 		local touchMovedConnection
-	
+
 		if not game:IsLoaded() then game.Loaded:Wait() end
-	
+
 		cam.CameraType = Enum.CameraType.Scriptable
-	
-		
+
+
 		local sens = .3
-	
+
 		_G.Speed /= 10
 		if onMobile then sens *= 2 end
-	
+
 		local function renderStepped()
 			if rotating then
 				local delta = UIS:GetMouseDelta()
@@ -742,7 +743,7 @@ local function NDNJ_fake_script() -- Button_6.LocalScript
 			else
 				UIS.MouseBehavior = Enum.MouseBehavior.Default
 			end
-	
+
 			if keysDown["Enum.KeyCode.W"] then
 				cam.CFrame *= CFrame.new(Vector3.new(0, 0, -_G.Speed))
 			end
@@ -756,11 +757,11 @@ local function NDNJ_fake_script() -- Button_6.LocalScript
 				cam.CFrame *= CFrame.new(Vector3.new(_G.Speed, 0, 0))
 			end
 		end
-	
+
 		renderStepConnection = RS.RenderStepped:Connect(renderStepped)
-	
+
 		local validKeys = {"Enum.KeyCode.W", "Enum.KeyCode.A", "Enum.KeyCode.S", "Enum.KeyCode.D"}
-	
+
 		inputBeganConnection = UIS.InputBegan:Connect(function(Input)
 			for i, key in pairs(validKeys) do
 				if key == tostring(Input.KeyCode) then
@@ -776,7 +777,7 @@ local function NDNJ_fake_script() -- Button_6.LocalScript
 				end
 			end
 		end)
-	
+
 		inputEndedConnection = UIS.InputEnded:Connect(function(Input)
 			for key, v in pairs(keysDown) do
 				if key == tostring(Input.KeyCode) then
@@ -796,7 +797,7 @@ local function NDNJ_fake_script() -- Button_6.LocalScript
 				end
 			end
 		end)
-	
+
 		touchMovedConnection = UIS.TouchMoved:Connect(function(input)
 			if touchPos then
 				if input.Position.X < cam.ViewportSize.X / 2 then
@@ -820,25 +821,25 @@ local function NDNJ_fake_script() -- Button_6.LocalScript
 				end
 			end
 		end)
-	
+
 		-- Store connections in ESPConnections for later disconnection
 		table.insert(ESPConnections, renderStepConnection)
 		table.insert(ESPConnections, inputBeganConnection)
 		table.insert(ESPConnections, inputEndedConnection)
 		table.insert(ESPConnections, touchMovedConnection)
 	end
-	
+
 	local function unactive()
 		for _, connection in ipairs(ESPConnections) do
 			connection:Disconnect()
 		end
 		ESPConnections = {}
-	
+
 		local cam = workspace.CurrentCamera
 		cam.CameraType = Enum.CameraType.Custom
 		cam.FieldOfView = 70  -- Reset to default FOV
 	end
-	
+
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -850,24 +851,24 @@ local function NDNJ_fake_script() -- Button_6.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-	
+
 end
-coroutine.wrap(NDNJ_fake_script)()
-local function KJUN_fake_script() -- Button_7.LocalScript 
+coroutine.wrap(XDSIKRJ_fake_script)()
+local function UDWNOM_fake_script() -- Button_7.LocalScript 
 	local script = Instance.new('LocalScript', Button_7)
 
 	local Button = script.Parent
 	local toggleactive = true
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Dvyct/NYXbot/main/main.lua"))()
-	
+
 	local function active()
 		_G.AimbotEnabled = true
 	end
-	
+
 	local function unactive()
 		_G.AimbotEnabled = false
 	end
-	
+
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -879,23 +880,23 @@ local function KJUN_fake_script() -- Button_7.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-	
+
 end
-coroutine.wrap(KJUN_fake_script)()
-local function NRDF_fake_script() -- Button_8.LocalScript 
+coroutine.wrap(UDWNOM_fake_script)()
+local function DFYB_fake_script() -- Button_8.LocalScript 
 	local script = Instance.new('LocalScript', Button_8)
 
 	local Button = script.Parent
 	local toggleactive = true
-	
+
 	local function active()
 		_G.StickyAimEnabled = true
 	end
-	
+
 	local function unactive()
 		_G.StickyAimEnabled = false
 	end
-	
+
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -907,10 +908,10 @@ local function NRDF_fake_script() -- Button_8.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-	
+
 end
-coroutine.wrap(NRDF_fake_script)()
-local function VSVB_fake_script() -- sped.LocalScript 
+coroutine.wrap(DFYB_fake_script)()
+local function SQDTJ_fake_script() -- sped.LocalScript 
 	local script = Instance.new('LocalScript', sped)
 
 	local Run = game:GetService("RunService")
@@ -918,8 +919,8 @@ local function VSVB_fake_script() -- sped.LocalScript
 		script.Parent.Text = "Freecam Speed = " .. tostring(tonumber(_G.Speed))
 	end)
 end
-coroutine.wrap(VSVB_fake_script)()
-local function PYYBD_fake_script() -- Button_9.LocalScript 
+coroutine.wrap(SQDTJ_fake_script)()
+local function ZVUJPM_fake_script() -- Button_9.LocalScript 
 	local script = Instance.new('LocalScript', Button_9)
 
 	local button = script.Parent 
@@ -928,18 +929,18 @@ local function PYYBD_fake_script() -- Button_9.LocalScript
 		_G.Speed = _G.Speed - 0.1
 	end)
 end
-coroutine.wrap(PYYBD_fake_script)()
-local function KMALMJ_fake_script() -- Button_10.LocalScript 
+coroutine.wrap(ZVUJPM_fake_script)()
+local function FQOTUCT_fake_script() -- Button_10.LocalScript 
 	local script = Instance.new('LocalScript', Button_10)
 
 	local button = script.Parent 
 	local RunService = game:GetService("RunService")
 	button.MouseButton1Down:Connect(function()
-	   _G.Speed = _G.Speed + 0.1
+		_G.Speed = _G.Speed + 0.1
 	end)
 end
-coroutine.wrap(KMALMJ_fake_script)()
-local function UKIBI_fake_script() -- Button_11.LocalScript 
+coroutine.wrap(FQOTUCT_fake_script)()
+local function MPLRIK_fake_script() -- Button_11.LocalScript 
 	local script = Instance.new('LocalScript', Button_11)
 
 	local Button = script.Parent
@@ -949,7 +950,7 @@ local function UKIBI_fake_script() -- Button_11.LocalScript
 	local function active()
 		Sense.teamSettings.enemy.enabled = true
 	end
-	
+
 	local function unactive()
 		Sense.teamSettings.enemy.enabled = false
 	end
@@ -957,42 +958,42 @@ local function UKIBI_fake_script() -- Button_11.LocalScript
 	Run.RenderStepped:Connect(function()
 		if _G.Tracers == true then
 			Sense.teamSettings.enemy.tracer = true
-	else 
+		else 
 			Sense.teamSettings.enemy.tracer = false
-	
-	end
-	
-	if _G.Boxes == true then
+
+		end
+
+		if _G.Boxes == true then
 			Sense.teamSettings.enemy.box3d = true
-	else 
+		else 
 			Sense.teamSettings.enemy.box3d = false
-	end
-	
-	if _G.Names == true then
+		end
+
+		if _G.Names == true then
 			Sense.teamSettings.enemy.name = true
-	else
+		else
 			Sense.teamSettings.enemy.name = false
-	end
-	
-	if _G.HealthBar == true then
+		end
+
+		if _G.HealthBar == true then
 			Sense.teamSettings.enemy.healthBar = true
-	else
+		else
 			Sense.teamSettings.enemy.healthBar = false
-	end
-	
-	if _G.Arrows == true then
+		end
+
+		if _G.Arrows == true then
 			Sense.teamSettings.enemy.offScreenArrow = true
-	else
+		else
 			Sense.teamSettings.enemy.offScreenArrow = false
-	end 
+		end 
 		if _G.Destroy == true then
 			Sense.Unload() 
 		end 
 	end)
-	
-	
-	
-	
+
+
+
+
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -1004,23 +1005,23 @@ local function UKIBI_fake_script() -- Button_11.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-	
+
 end
-coroutine.wrap(UKIBI_fake_script)()
-local function HNJBECV_fake_script() -- Button_12.LocalScript 
+coroutine.wrap(MPLRIK_fake_script)()
+local function HYRBOK_fake_script() -- Button_12.LocalScript 
 	local script = Instance.new('LocalScript', Button_12)
 
 	local Button = script.Parent
 	local toggleactive = true
-	
+
 	local function active()
 		_G.Boxes = true
 	end
-	
+
 	local function unactive()
 		_G.Boxes = false
 	end
-	
+
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -1032,23 +1033,23 @@ local function HNJBECV_fake_script() -- Button_12.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-	
+
 end
-coroutine.wrap(HNJBECV_fake_script)()
-local function ALKZZQ_fake_script() -- Button_13.LocalScript 
+coroutine.wrap(HYRBOK_fake_script)()
+local function SDDSXD_fake_script() -- Button_13.LocalScript 
 	local script = Instance.new('LocalScript', Button_13)
 
 	local Button = script.Parent
 	local toggleactive = true
-	
+
 	local function active()
 		_G.HealthBar = true
 	end
-	
+
 	local function unactive()
 		_G.HealthBar = false
 	end
-	
+
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -1060,23 +1061,23 @@ local function ALKZZQ_fake_script() -- Button_13.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-	
+
 end
-coroutine.wrap(ALKZZQ_fake_script)()
-local function QZLNAU_fake_script() -- Button_14.LocalScript 
+coroutine.wrap(SDDSXD_fake_script)()
+local function MUYO_fake_script() -- Button_14.LocalScript 
 	local script = Instance.new('LocalScript', Button_14)
 
 	local Button = script.Parent
 	local toggleactive = true
-	
+
 	local function active()
 		_G.Names = true
 	end
-	
+
 	local function unactive()
 		_G.Names = false
 	end
-	
+
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -1088,23 +1089,23 @@ local function QZLNAU_fake_script() -- Button_14.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-	
+
 end
-coroutine.wrap(QZLNAU_fake_script)()
-local function PGAAUZ_fake_script() -- Button_15.LocalScript 
+coroutine.wrap(MUYO_fake_script)()
+local function QVBERN_fake_script() -- Button_15.LocalScript 
 	local script = Instance.new('LocalScript', Button_15)
 
 	local Button = script.Parent
 	local toggleactive = true
-	
+
 	local function active()
 		_G.Arrows = true
 	end
-	
+
 	local function unactive()
 		_G.Arrows = false
 	end
-	
+
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -1116,23 +1117,23 @@ local function PGAAUZ_fake_script() -- Button_15.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-	
+
 end
-coroutine.wrap(PGAAUZ_fake_script)()
-local function FOFXML_fake_script() -- Button_16.LocalScript 
+coroutine.wrap(QVBERN_fake_script)()
+local function PUBKHIE_fake_script() -- Button_16.LocalScript 
 	local script = Instance.new('LocalScript', Button_16)
 
 	local Button = script.Parent
 	local toggleactive = true
-	
+
 	local function active()
 		_G.Tracers = true
 	end
-	
+
 	local function unactive()
 		_G.Tracers = false
 	end
-	
+
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -1144,26 +1145,26 @@ local function FOFXML_fake_script() -- Button_16.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-	
+
 end
-coroutine.wrap(FOFXML_fake_script)()
-local function PBTZJD_fake_script() -- movesped.LocalScript 
+coroutine.wrap(PUBKHIE_fake_script)()
+local function FKOJUTY_fake_script() -- movesped.LocalScript 
 	local script = Instance.new('LocalScript', movesped)
 
 	local Run = game:GetService("RunService")
-	
+
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
 	local UserInputService = game:GetService("UserInputService")
-	
+
 	local player = Players.LocalPlayer
 	local character = player.Character or player.CharacterAdded:Wait()
 	local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-	
-	_G.WalkSpeedBonus = 0 -- Initial bonus to walk speed
-	
+
+	_G.WSpeed = 0 -- Initial bonus to walk speed
+
 	local moveDirection = Vector3.new(0, 0, 0)
-	
+
 	-- Function to update move direction based on input
 	local function updateMoveDirection()
 		local direction = Vector3.new(0, 0, 0)
@@ -1174,36 +1175,36 @@ local function PBTZJD_fake_script() -- movesped.LocalScript
 			direction -= humanoidRootPart.CFrame.LookVector
 		end
 		if UserInputService:IsKeyDown(Enum.KeyCode.A) then
-	
+
 			direction -= humanoidRootPart.CFrame.RightVector
 		end
 		if UserInputService:IsKeyDown(Enum.KeyCode.D) then
-	
+
 			direction += humanoidRootPart.CFrame.RightVector
 		end
 		moveDirection = direction
 	end
-	
+
 	-- Connect input events to update move direction
 	UserInputService.InputBegan:Connect(updateMoveDirection)
 	UserInputService.InputEnded:Connect(updateMoveDirection)
-	
+
 	-- Main loop to update character's position
 	RunService.Stepped:Connect(function()
 		updateMoveDirection() -- Ensure moveDirection is up-to-date
 		if moveDirection.Magnitude > 0 then
-			moveDirection = moveDirection.Unit * (_G.WalkSpeedBonus * RunService.Heartbeat:Wait()) -- Use Heartbeat to adjust speed based on frame rate
+			moveDirection = moveDirection.Unit * (_G.WSpeed * RunService.Heartbeat:Wait()) -- Use Heartbeat to adjust speed based on frame rate
 			humanoidRootPart.CFrame = humanoidRootPart.CFrame + moveDirection
 		end
 	end)
-	
-	
+
+
 	Run.RenderStepped:Connect(function()
-		script.Parent.Text = "WalkSpeed = " .. tostring(tonumber(_G.WSpeed + 16))
+		script.Parent.Text = "WalkSpeed = " .. tostring(tonumber(_G.WSpeed)+ 16)
 	end)
 end
-coroutine.wrap(PBTZJD_fake_script)()
-local function FQMB_fake_script() -- Button_17.LocalScript 
+coroutine.wrap(FKOJUTY_fake_script)()
+local function STHC_fake_script() -- Button_17.LocalScript 
 	local script = Instance.new('LocalScript', Button_17)
 
 	local button = script.Parent 
@@ -1212,14 +1213,14 @@ local function FQMB_fake_script() -- Button_17.LocalScript
 		_G.WSpeed = _G.WSpeed - 0.1
 	end)
 end
-coroutine.wrap(FQMB_fake_script)()
-local function QEGJVM_fake_script() -- Button_18.LocalScript 
+coroutine.wrap(STHC_fake_script)()
+local function AEGR_fake_script() -- Button_18.LocalScript 
 	local script = Instance.new('LocalScript', Button_18)
 
 	local button = script.Parent 
 	local RunService = game:GetService("RunService")
 	button.MouseButton1Down:Connect(function()
-	   _G.WSpeed = _G.WSpeed + 0.1
+		_G.WSpeed = _G.WSpeed + 0.1
 	end)
 end
-coroutine.wrap(QEGJVM_fake_script)()
+coroutine.wrap(AEGR_fake_script)()
