@@ -1,22 +1,23 @@
--- V.2.5
+-- V.2.6
 
 local BLSCRIPT = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
+local Main = Instance.new("Frame")
+local Assets = Instance.new("Folder")
 local HelloText = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local Button = Instance.new("TextButton")
-local TextLabel_2 = Instance.new("TextLabel")
 local Button_2 = Instance.new("TextButton")
-local TextLabel_3 = Instance.new("TextLabel")
 local Button_3 = Instance.new("TextButton")
 local Button_4 = Instance.new("TextButton")
-local TextLabel_4 = Instance.new("TextLabel")
 local Button_5 = Instance.new("TextButton")
-local TextLabel_5 = Instance.new("TextLabel")
 local Button_6 = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
 local Button_7 = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
 local Button_8 = Instance.new("TextButton")
+local TextLabel_4 = Instance.new("TextLabel")
 local Button_9 = Instance.new("TextButton")
+local TextLabel_5 = Instance.new("TextLabel")
 local Button_10 = Instance.new("TextButton")
 local TextLabel_6 = Instance.new("TextLabel")
 local TextLabel_7 = Instance.new("TextLabel")
@@ -31,6 +32,7 @@ local TextLabel_11 = Instance.new("TextLabel")
 local Button_15 = Instance.new("TextButton")
 local TextLabel_12 = Instance.new("TextLabel")
 local Button_16 = Instance.new("TextButton")
+local UIGradient = Instance.new("UIGradient")
 
 --Properties:
 
@@ -38,15 +40,19 @@ BLSCRIPT.Name = "BLSCRIPT"
 BLSCRIPT.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 BLSCRIPT.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame.Parent = BLSCRIPT
-Frame.BackgroundColor3 = Color3.fromRGB(43, 57, 50)
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.036966525, 0, 0.132651046, 0)
-Frame.Size = UDim2.new(0, 254, 0, 566)
+Main.Name = "Main"
+Main.Parent = BLSCRIPT
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.036966525, 0, 0.132651046, 0)
+Main.Size = UDim2.new(0, 254, 0, 566)
+
+Assets.Name = "Assets"
+Assets.Parent = Main
 
 HelloText.Name = "HelloText"
-HelloText.Parent = Frame
+HelloText.Parent = Assets
 HelloText.AnchorPoint = Vector2.new(0.5, 0.5)
 HelloText.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
 HelloText.BorderColor3 = Color3.fromRGB(0, 251, 255)
@@ -69,7 +75,7 @@ TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 
 Button.Name = "Button"
-Button.Parent = Frame
+Button.Parent = Assets
 Button.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
 Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Button.Position = UDim2.new(0.051181104, 0, 0.154666662, 0)
@@ -79,7 +85,62 @@ Button.Text = "Destroy GUI"
 Button.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button.TextSize = 14.000
 
-TextLabel_2.Parent = Frame
+Button_2.Name = "Button"
+Button_2.Parent = Assets
+Button_2.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
+Button_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_2.Position = UDim2.new(0.0472440943, 0, 0.543516159, 0)
+Button_2.Size = UDim2.new(0.897637665, 0, 0, 23)
+Button_2.Font = Enum.Font.Merriweather
+Button_2.Text = "Skeletons (EXPERIMENTAL)"
+Button_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button_2.TextSize = 14.000
+
+Button_3.Name = "Button"
+Button_3.Parent = Assets
+Button_3.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
+Button_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_3.Position = UDim2.new(0.0433070883, 0, 0.839644134, 0)
+Button_3.Size = UDim2.new(0.897637665, 0, 0, 23)
+Button_3.Font = Enum.Font.Merriweather
+Button_3.Text = "Select Head"
+Button_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button_3.TextSize = 14.000
+
+Button_4.Name = "Button"
+Button_4.Parent = Assets
+Button_4.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
+Button_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_4.Position = UDim2.new(0.0472440943, 0, 0.898472309, 0)
+Button_4.Size = UDim2.new(0.897637665, 0, 0, 23)
+Button_4.Font = Enum.Font.Merriweather
+Button_4.Text = "Select Torso"
+Button_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button_4.TextSize = 14.000
+
+Button_5.Name = "Button"
+Button_5.Parent = Assets
+Button_5.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
+Button_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_5.Position = UDim2.new(0.236220419, 0, 0.649769604, 0)
+Button_5.Size = UDim2.new(0.173228219, 0, 0, 23)
+Button_5.Font = Enum.Font.Merriweather
+Button_5.Text = "+"
+Button_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button_5.TextSize = 14.000
+
+Button_6.Name = "Button"
+Button_6.Parent = Assets
+Button_6.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
+Button_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_6.Position = UDim2.new(0.0236220472, 0, 0.64847517, 0)
+Button_6.Size = UDim2.new(0.173228219, 0, 0, 23)
+Button_6.Font = Enum.Font.Merriweather
+Button_6.Text = "-"
+Button_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button_6.TextSize = 14.000
+
+TextLabel_2.Parent = Assets
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -92,18 +153,18 @@ TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 14.000
 TextLabel_2.TextXAlignment = Enum.TextXAlignment.Right
 
-Button_2.Name = "Button"
-Button_2.Parent = TextLabel_2
-Button_2.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
-Button_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_2.Position = UDim2.new(1.05238438, 0, 0.0687534511, 0)
-Button_2.Size = UDim2.new(0, 23, 0, 23)
-Button_2.Font = Enum.Font.Merriweather
-Button_2.Text = ""
-Button_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button_2.TextSize = 14.000
+Button_7.Name = "Button"
+Button_7.Parent = TextLabel_2
+Button_7.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
+Button_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_7.Position = UDim2.new(1.05238438, 0, 0.0687534511, 0)
+Button_7.Size = UDim2.new(0, 23, 0, 23)
+Button_7.Font = Enum.Font.Merriweather
+Button_7.Text = ""
+Button_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button_7.TextSize = 14.000
 
-TextLabel_3.Parent = Frame
+TextLabel_3.Parent = Assets
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.BackgroundTransparency = 1.000
 TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -116,29 +177,18 @@ TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextSize = 14.000
 TextLabel_3.TextXAlignment = Enum.TextXAlignment.Right
 
-Button_3.Name = "Button"
-Button_3.Parent = TextLabel_3
-Button_3.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
-Button_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_3.Position = UDim2.new(1.05238438, 0, 0.0687534511, 0)
-Button_3.Size = UDim2.new(0, 23, 0, 23)
-Button_3.Font = Enum.Font.Merriweather
-Button_3.Text = ""
-Button_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button_3.TextSize = 14.000
+Button_8.Name = "Button"
+Button_8.Parent = TextLabel_3
+Button_8.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
+Button_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_8.Position = UDim2.new(1.05238438, 0, 0.0687534511, 0)
+Button_8.Size = UDim2.new(0, 23, 0, 23)
+Button_8.Font = Enum.Font.Merriweather
+Button_8.Text = ""
+Button_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button_8.TextSize = 14.000
 
-Button_4.Name = "Button"
-Button_4.Parent = Frame
-Button_4.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
-Button_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_4.Position = UDim2.new(0.0472440943, 0, 0.543516159, 0)
-Button_4.Size = UDim2.new(0.897637665, 0, 0, 23)
-Button_4.Font = Enum.Font.Merriweather
-Button_4.Text = "Skeletons (EXPERIMENTAL)"
-Button_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button_4.TextSize = 14.000
-
-TextLabel_4.Parent = Frame
+TextLabel_4.Parent = Assets
 TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.BackgroundTransparency = 1.000
 TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -151,18 +201,18 @@ TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.TextSize = 14.000
 TextLabel_4.TextXAlignment = Enum.TextXAlignment.Right
 
-Button_5.Name = "Button"
-Button_5.Parent = TextLabel_4
-Button_5.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
-Button_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_5.Position = UDim2.new(1.01790178, 0, -0.0182030722, 0)
-Button_5.Size = UDim2.new(0, 23, 0, 23)
-Button_5.Font = Enum.Font.Merriweather
-Button_5.Text = ""
-Button_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button_5.TextSize = 14.000
+Button_9.Name = "Button"
+Button_9.Parent = TextLabel_4
+Button_9.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
+Button_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_9.Position = UDim2.new(1.01790178, 0, -0.0182030722, 0)
+Button_9.Size = UDim2.new(0, 23, 0, 23)
+Button_9.Font = Enum.Font.Merriweather
+Button_9.Text = ""
+Button_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button_9.TextSize = 14.000
 
-TextLabel_5.Parent = Frame
+TextLabel_5.Parent = Assets
 TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.BackgroundTransparency = 1.000
 TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -175,68 +225,24 @@ TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.TextSize = 14.000
 TextLabel_5.TextXAlignment = Enum.TextXAlignment.Right
 
-Button_6.Name = "Button"
-Button_6.Parent = TextLabel_5
-Button_6.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
-Button_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_6.Position = UDim2.new(1.0179019, 0, -0.0182030722, 0)
-Button_6.Size = UDim2.new(0, 23, 0, 23)
-Button_6.Font = Enum.Font.Merriweather
-Button_6.Text = ""
-Button_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button_6.TextSize = 14.000
-
-Button_7.Name = "Button"
-Button_7.Parent = Frame
-Button_7.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
-Button_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_7.Position = UDim2.new(0.0433070883, 0, 0.839644134, 0)
-Button_7.Size = UDim2.new(0.897637665, 0, 0, 23)
-Button_7.Font = Enum.Font.Merriweather
-Button_7.Text = "Select Head"
-Button_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button_7.TextSize = 14.000
-
-Button_8.Name = "Button"
-Button_8.Parent = Frame
-Button_8.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
-Button_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_8.Position = UDim2.new(0.0472440943, 0, 0.898472309, 0)
-Button_8.Size = UDim2.new(0.897637665, 0, 0, 23)
-Button_8.Font = Enum.Font.Merriweather
-Button_8.Text = "Select Torso"
-Button_8.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button_8.TextSize = 14.000
-
-Button_9.Name = "Button"
-Button_9.Parent = Frame
-Button_9.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
-Button_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_9.Position = UDim2.new(0.216535375, 0, 0.651536405, 0)
-Button_9.Size = UDim2.new(0.173228219, 0, 0, 23)
-Button_9.Font = Enum.Font.Merriweather
-Button_9.Text = "+"
-Button_9.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button_9.TextSize = 14.000
-
 Button_10.Name = "Button"
-Button_10.Parent = Frame
+Button_10.Parent = TextLabel_5
 Button_10.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
 Button_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_10.Position = UDim2.new(0.00393700786, 0, 0.650241971, 0)
-Button_10.Size = UDim2.new(0.173228219, 0, 0, 23)
+Button_10.Position = UDim2.new(1.0179019, 0, -0.0182030722, 0)
+Button_10.Size = UDim2.new(0, 23, 0, 23)
 Button_10.Font = Enum.Font.Merriweather
-Button_10.Text = "-"
+Button_10.Text = ""
 Button_10.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button_10.TextSize = 14.000
 
-TextLabel_6.Parent = Frame
+TextLabel_6.Parent = Assets
 TextLabel_6.AnchorPoint = Vector2.new(0.5, 0.5)
 TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_6.BackgroundTransparency = 1.000
 TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_6.BorderSizePixel = 0
-TextLabel_6.Position = UDim2.new(0.198818892, 0, 0.623985887, 0)
+TextLabel_6.Position = UDim2.new(0.218503937, 0, 0.622219145, 0)
 TextLabel_6.Size = UDim2.new(0, 101, 0, 18)
 TextLabel_6.Font = Enum.Font.Merriweather
 TextLabel_6.Text = "Freecam Speed = 3"
@@ -245,7 +251,7 @@ TextLabel_6.TextScaled = true
 TextLabel_6.TextSize = 14.000
 TextLabel_6.TextWrapped = true
 
-TextLabel_7.Parent = Frame
+TextLabel_7.Parent = Assets
 TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.BackgroundTransparency = 1.000
 TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -269,7 +275,7 @@ Button_11.Text = ""
 Button_11.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button_11.TextSize = 14.000
 
-TextLabel_8.Parent = Frame
+TextLabel_8.Parent = Assets
 TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.BackgroundTransparency = 1.000
 TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -293,7 +299,7 @@ Button_12.Text = ""
 Button_12.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button_12.TextSize = 14.000
 
-TextLabel_9.Parent = Frame
+TextLabel_9.Parent = Assets
 TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_9.BackgroundTransparency = 1.000
 TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -317,7 +323,7 @@ Button_13.Text = ""
 Button_13.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button_13.TextSize = 14.000
 
-TextLabel_10.Parent = Frame
+TextLabel_10.Parent = Assets
 TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.BackgroundTransparency = 1.000
 TextLabel_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -341,7 +347,7 @@ Button_14.Text = ""
 Button_14.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button_14.TextSize = 14.000
 
-TextLabel_11.Parent = Frame
+TextLabel_11.Parent = Assets
 TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_11.BackgroundTransparency = 1.000
 TextLabel_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -365,7 +371,7 @@ Button_15.Text = ""
 Button_15.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button_15.TextSize = 14.000
 
-TextLabel_12.Parent = Frame
+TextLabel_12.Parent = Assets
 TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_12.BackgroundTransparency = 1.000
 TextLabel_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -389,15 +395,19 @@ Button_16.Text = ""
 Button_16.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button_16.TextSize = 14.000
 
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(43, 57, 50)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(24, 31, 27))}
+UIGradient.Rotation = 90
+UIGradient.Parent = Main
+
 -- Scripts:
 
-local function TTEC_fake_script() -- TextLabel.LocalScript 
+local function LCHVO_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.Text = "Hello: " .. game.Players.LocalPlayer.Name 
 end
-coroutine.wrap(TTEC_fake_script)()
-local function FDRZ_fake_script() -- Button.LocalScript 
+coroutine.wrap(LCHVO_fake_script)()
+local function YEEW_fake_script() -- Button.LocalScript 
 	local script = Instance.new('LocalScript', Button)
 
 	local button = script.Parent 
@@ -410,9 +420,68 @@ local function FDRZ_fake_script() -- Button.LocalScript
 	
 	end)
 end
-coroutine.wrap(FDRZ_fake_script)()
-local function HCRWP_fake_script() -- Button_2.LocalScript 
+coroutine.wrap(YEEW_fake_script)()
+local function ANOMV_fake_script() -- Button_2.LocalScript 
 	local script = Instance.new('LocalScript', Button_2)
+
+	local button = script.Parent 
+	local RunService = game:GetService("RunService")
+	button.MouseButton1Down:Connect(function()
+		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/main/UniversalSkeleton.lua"))()
+	
+	
+		local Skeletons = {}
+		for _, Player in next, game.Players:GetChildren() do
+			table.insert(Skeletons, Library:NewSkeleton(Player, true));
+		end
+		game.Players.PlayerAdded:Connect(function(Player)
+			table.insert(Skeletons, Library:NewSkeleton(Player, true));
+		end)
+	end)
+end
+coroutine.wrap(ANOMV_fake_script)()
+local function DMIWILC_fake_script() -- Button_3.LocalScript 
+	local script = Instance.new('LocalScript', Button_3)
+
+	local button = script.Parent 
+	local RunService = game:GetService("RunService")
+	button.MouseButton1Down:Connect(function()
+		_G.AimbotPart = "Head" 
+	end)
+end
+coroutine.wrap(DMIWILC_fake_script)()
+local function ANWFLC_fake_script() -- Button_4.LocalScript 
+	local script = Instance.new('LocalScript', Button_4)
+
+	local button = script.Parent 
+	local RunService = game:GetService("RunService")
+	button.MouseButton1Down:Connect(function()
+		_G.AimbotPart = "HumanoidRootPart" 
+	end)
+end
+coroutine.wrap(ANWFLC_fake_script)()
+local function WVZGV_fake_script() -- Button_5.LocalScript 
+	local script = Instance.new('LocalScript', Button_5)
+
+	local button = script.Parent 
+	local RunService = game:GetService("RunService")
+	button.MouseButton1Down:Connect(function()
+	   _G.Speed = _G.Speed + 0.1
+	end)
+end
+coroutine.wrap(WVZGV_fake_script)()
+local function IMELFHX_fake_script() -- Button_6.LocalScript 
+	local script = Instance.new('LocalScript', Button_6)
+
+	local button = script.Parent 
+	local RunService = game:GetService("RunService")
+	button.MouseButton1Down:Connect(function()
+		_G.Speed = _G.Speed - 0.1
+	end)
+end
+coroutine.wrap(IMELFHX_fake_script)()
+local function GGBSBS_fake_script() -- Button_7.LocalScript 
+	local script = Instance.new('LocalScript', Button_7)
 
 	local Button = script.Parent
 	local toggleactive = true
@@ -601,9 +670,9 @@ local function HCRWP_fake_script() -- Button_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(HCRWP_fake_script)()
-local function PDVQH_fake_script() -- Button_3.LocalScript 
-	local script = Instance.new('LocalScript', Button_3)
+coroutine.wrap(GGBSBS_fake_script)()
+local function SIDCS_fake_script() -- Button_8.LocalScript 
+	local script = Instance.new('LocalScript', Button_8)
 
 	local Button = script.Parent
 	local toggleactive = true
@@ -761,28 +830,9 @@ local function PDVQH_fake_script() -- Button_3.LocalScript
 	end)
 	
 end
-coroutine.wrap(PDVQH_fake_script)()
-local function LJPG_fake_script() -- Button_4.LocalScript 
-	local script = Instance.new('LocalScript', Button_4)
-
-	local button = script.Parent 
-	local RunService = game:GetService("RunService")
-	button.MouseButton1Down:Connect(function()
-		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/main/UniversalSkeleton.lua"))()
-	
-	
-		local Skeletons = {}
-		for _, Player in next, game.Players:GetChildren() do
-			table.insert(Skeletons, Library:NewSkeleton(Player, true));
-		end
-		game.Players.PlayerAdded:Connect(function(Player)
-			table.insert(Skeletons, Library:NewSkeleton(Player, true));
-		end)
-	end)
-end
-coroutine.wrap(LJPG_fake_script)()
-local function JZECV_fake_script() -- Button_5.LocalScript 
-	local script = Instance.new('LocalScript', Button_5)
+coroutine.wrap(SIDCS_fake_script)()
+local function CEJQ_fake_script() -- Button_9.LocalScript 
+	local script = Instance.new('LocalScript', Button_9)
 
 	local Button = script.Parent
 	local toggleactive = true
@@ -809,9 +859,9 @@ local function JZECV_fake_script() -- Button_5.LocalScript
 	end)
 	
 end
-coroutine.wrap(JZECV_fake_script)()
-local function EATERHO_fake_script() -- Button_6.LocalScript 
-	local script = Instance.new('LocalScript', Button_6)
+coroutine.wrap(CEJQ_fake_script)()
+local function NLRHMAB_fake_script() -- Button_10.LocalScript 
+	local script = Instance.new('LocalScript', Button_10)
 
 	local Button = script.Parent
 	local toggleactive = true
@@ -837,48 +887,8 @@ local function EATERHO_fake_script() -- Button_6.LocalScript
 	end)
 	
 end
-coroutine.wrap(EATERHO_fake_script)()
-local function GEZUQS_fake_script() -- Button_7.LocalScript 
-	local script = Instance.new('LocalScript', Button_7)
-
-	local button = script.Parent 
-	local RunService = game:GetService("RunService")
-	button.MouseButton1Down:Connect(function()
-		_G.AimbotPart = "Head" 
-	end)
-end
-coroutine.wrap(GEZUQS_fake_script)()
-local function VHDUX_fake_script() -- Button_8.LocalScript 
-	local script = Instance.new('LocalScript', Button_8)
-
-	local button = script.Parent 
-	local RunService = game:GetService("RunService")
-	button.MouseButton1Down:Connect(function()
-		_G.AimbotPart = "HumanoidRootPart" 
-	end)
-end
-coroutine.wrap(VHDUX_fake_script)()
-local function GKHHTZB_fake_script() -- Button_9.LocalScript 
-	local script = Instance.new('LocalScript', Button_9)
-
-	local button = script.Parent 
-	local RunService = game:GetService("RunService")
-	button.MouseButton1Down:Connect(function()
-	   _G.Speed = _G.Speed + 0.1
-	end)
-end
-coroutine.wrap(GKHHTZB_fake_script)()
-local function ZYBWK_fake_script() -- Button_10.LocalScript 
-	local script = Instance.new('LocalScript', Button_10)
-
-	local button = script.Parent 
-	local RunService = game:GetService("RunService")
-	button.MouseButton1Down:Connect(function()
-		_G.Speed = _G.Speed - 0.1
-	end)
-end
-coroutine.wrap(ZYBWK_fake_script)()
-local function POUY_fake_script() -- TextLabel_6.LocalScript 
+coroutine.wrap(NLRHMAB_fake_script)()
+local function XGTC_fake_script() -- TextLabel_6.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_6)
 
 	local Run = game:GetService("RunService")
@@ -886,8 +896,8 @@ local function POUY_fake_script() -- TextLabel_6.LocalScript
 		script.Parent.Text = "Freecam Speed = " .. tostring(tonumber(_G.Speed))
 	end)
 end
-coroutine.wrap(POUY_fake_script)()
-local function BKGFBSD_fake_script() -- Button_11.LocalScript 
+coroutine.wrap(XGTC_fake_script)()
+local function VESUWCQ_fake_script() -- Button_11.LocalScript 
 	local script = Instance.new('LocalScript', Button_11)
 
 	local Button = script.Parent
@@ -954,8 +964,8 @@ local function BKGFBSD_fake_script() -- Button_11.LocalScript
 	end)
 	
 end
-coroutine.wrap(BKGFBSD_fake_script)()
-local function YDCJE_fake_script() -- Button_12.LocalScript 
+coroutine.wrap(VESUWCQ_fake_script)()
+local function FCRPI_fake_script() -- Button_12.LocalScript 
 	local script = Instance.new('LocalScript', Button_12)
 
 	local Button = script.Parent
@@ -982,8 +992,8 @@ local function YDCJE_fake_script() -- Button_12.LocalScript
 	end)
 	
 end
-coroutine.wrap(YDCJE_fake_script)()
-local function BNDUCVX_fake_script() -- Button_13.LocalScript 
+coroutine.wrap(FCRPI_fake_script)()
+local function HPXWEUV_fake_script() -- Button_13.LocalScript 
 	local script = Instance.new('LocalScript', Button_13)
 
 	local Button = script.Parent
@@ -1010,8 +1020,8 @@ local function BNDUCVX_fake_script() -- Button_13.LocalScript
 	end)
 	
 end
-coroutine.wrap(BNDUCVX_fake_script)()
-local function YUHB_fake_script() -- Button_14.LocalScript 
+coroutine.wrap(HPXWEUV_fake_script)()
+local function KZWFRT_fake_script() -- Button_14.LocalScript 
 	local script = Instance.new('LocalScript', Button_14)
 
 	local Button = script.Parent
@@ -1038,8 +1048,8 @@ local function YUHB_fake_script() -- Button_14.LocalScript
 	end)
 	
 end
-coroutine.wrap(YUHB_fake_script)()
-local function ZPKR_fake_script() -- Button_15.LocalScript 
+coroutine.wrap(KZWFRT_fake_script)()
+local function MTDV_fake_script() -- Button_15.LocalScript 
 	local script = Instance.new('LocalScript', Button_15)
 
 	local Button = script.Parent
@@ -1066,8 +1076,8 @@ local function ZPKR_fake_script() -- Button_15.LocalScript
 	end)
 	
 end
-coroutine.wrap(ZPKR_fake_script)()
-local function RSUCPKS_fake_script() -- Button_16.LocalScript 
+coroutine.wrap(MTDV_fake_script)()
+local function DWKHKR_fake_script() -- Button_16.LocalScript 
 	local script = Instance.new('LocalScript', Button_16)
 
 	local Button = script.Parent
@@ -1094,4 +1104,4 @@ local function RSUCPKS_fake_script() -- Button_16.LocalScript
 	end)
 	
 end
-coroutine.wrap(RSUCPKS_fake_script)()
+coroutine.wrap(DWKHKR_fake_script)()
