@@ -1,4 +1,4 @@
--- V.2.6
+-- V.2.6 Double Push
 
 local BLSCRIPT = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
