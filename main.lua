@@ -1,4 +1,4 @@
--- V.2.8
+-- V.2.9
 
 local BLSCRIPT = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
@@ -32,15 +32,20 @@ local TextLabel_9 = Instance.new("TextLabel")
 local Button_15 = Instance.new("TextButton")
 local TextLabel_10 = Instance.new("TextLabel")
 local Button_16 = Instance.new("TextButton")
-local movesped = Instance.new("TextLabel")
+local step = Instance.new("TextLabel")
 local Button_17 = Instance.new("TextButton")
 local Button_18 = Instance.new("TextButton")
+local TextLabel_11 = Instance.new("TextLabel")
+local Button_19 = Instance.new("TextButton")
+local aimbot = Instance.new("TextLabel")
+local Button_20 = Instance.new("TextButton")
+local Button_21 = Instance.new("TextButton")
 local UIGradient = Instance.new("UIGradient")
 
 --Properties:
 
 BLSCRIPT.Name = "BLSCRIPT"
-BLSCRIPT.Parent = game.ReplicatedStorage
+BLSCRIPT.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 BLSCRIPT.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
@@ -49,7 +54,7 @@ Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
 Main.Position = UDim2.new(0.036966525, 0, 0.132651046, 0)
-Main.Size = UDim2.new(0, 254, 0, 566)
+Main.Size = UDim2.new(0, 254, 0, 611)
 
 Assets.Name = "Assets"
 Assets.Parent = Main
@@ -92,7 +97,7 @@ Button_2.Name = "Button"
 Button_2.Parent = Assets
 Button_2.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
 Button_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_2.Position = UDim2.new(0.0472440943, 0, 0.543516159, 0)
+Button_2.Position = UDim2.new(0.0196850393, 0, 0.500962973, 0)
 Button_2.Size = UDim2.new(0.897637665, 0, 0, 23)
 Button_2.Font = Enum.Font.Merriweather
 Button_2.Text = "Skeletons (EXPERIMENTAL)"
@@ -103,7 +108,7 @@ Button_3.Name = "Button"
 Button_3.Parent = Assets
 Button_3.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
 Button_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_3.Position = UDim2.new(0.0433070883, 0, 0.839644134, 0)
+Button_3.Position = UDim2.new(0.0472440943, 0, 0.767631054, 0)
 Button_3.Size = UDim2.new(0.897637665, 0, 0, 23)
 Button_3.Font = Enum.Font.Merriweather
 Button_3.Text = "Select Head"
@@ -114,7 +119,7 @@ Button_4.Name = "Button"
 Button_4.Parent = Assets
 Button_4.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
 Button_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_4.Position = UDim2.new(0.0472440943, 0, 0.898472309, 0)
+Button_4.Position = UDim2.new(0.051181104, 0, 0.826459169, 0)
 Button_4.Size = UDim2.new(0.897637665, 0, 0, 23)
 Button_4.Font = Enum.Font.Merriweather
 Button_4.Text = "Select Torso"
@@ -127,7 +132,7 @@ thing.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 thing.BackgroundTransparency = 1.000
 thing.BorderColor3 = Color3.fromRGB(0, 0, 0)
 thing.BorderSizePixel = 0
-thing.Position = UDim2.new(0.017361559, 0, 0.607129872, 0)
+thing.Position = UDim2.new(0.017361559, 0, 0.548210084, 0)
 thing.Size = UDim2.new(0, 203, 0, 23)
 thing.Font = Enum.Font.Merriweather
 thing.Text = "Freecam"
@@ -151,7 +156,7 @@ TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.017361559, 0, 0.66352731, 0)
+TextLabel_2.Position = UDim2.new(0.017361559, 0, 0.59969759, 0)
 TextLabel_2.Size = UDim2.new(0, 203, 0, 23)
 TextLabel_2.Font = Enum.Font.Merriweather
 TextLabel_2.Text = " Walking Freecam"
@@ -175,7 +180,7 @@ TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.BackgroundTransparency = 1.000
 TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.0488576218, 0, 0.722745836, 0)
+TextLabel_3.Position = UDim2.new(0.0488576218, 0, 0.655642748, 0)
 TextLabel_3.Size = UDim2.new(0, 203, 0, 23)
 TextLabel_3.Font = Enum.Font.Merriweather
 TextLabel_3.Text = "Aimbot Enabled"
@@ -199,7 +204,7 @@ TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.BackgroundTransparency = 1.000
 TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0.0449206121, 0, 0.782533586, 0)
+TextLabel_4.Position = UDim2.new(0.0488576218, 0, 0.708883762, 0)
 TextLabel_4.Size = UDim2.new(0, 203, 0, 23)
 TextLabel_4.Font = Enum.Font.Merriweather
 TextLabel_4.Text = "Sticky Aim Enabled"
@@ -225,7 +230,7 @@ sped.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 sped.BackgroundTransparency = 1.000
 sped.BorderColor3 = Color3.fromRGB(0, 0, 0)
 sped.BorderSizePixel = 0
-sped.Position = UDim2.new(0.222440943, 0, 0.622219145, 0)
+sped.Position = UDim2.new(0.218503937, 0, 0.563299358, 0)
 sped.Size = UDim2.new(0, 101, 0, 18)
 sped.Font = Enum.Font.Merriweather
 sped.Text = "Freecam Speed = 3"
@@ -285,7 +290,7 @@ TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_6.BackgroundTransparency = 1.000
 TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_6.BorderSizePixel = 0
-TextLabel_6.Position = UDim2.new(0, 0, 0.259451926, 0)
+TextLabel_6.Position = UDim2.new(0, 0, 0.256178647, 0)
 TextLabel_6.Size = UDim2.new(0, 203, 0, 23)
 TextLabel_6.Font = Enum.Font.Merriweather
 TextLabel_6.Text = "Boxes"
@@ -309,7 +314,7 @@ TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.BackgroundTransparency = 1.000
 TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_7.BorderSizePixel = 0
-TextLabel_7.Position = UDim2.new(0, 0, 0.315973282, 0)
+TextLabel_7.Position = UDim2.new(0, 0, 0.304516673, 0)
 TextLabel_7.Size = UDim2.new(0, 203, 0, 23)
 TextLabel_7.Font = Enum.Font.Merriweather
 TextLabel_7.Text = "Health Bar"
@@ -333,7 +338,7 @@ TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.BackgroundTransparency = 1.000
 TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_8.BorderSizePixel = 0
-TextLabel_8.Position = UDim2.new(0, 0, 0.375117391, 0)
+TextLabel_8.Position = UDim2.new(0, 0, 0.352204114, 0)
 TextLabel_8.Size = UDim2.new(0, 203, 0, 23)
 TextLabel_8.Font = Enum.Font.Merriweather
 TextLabel_8.Text = "Names"
@@ -357,7 +362,7 @@ TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_9.BackgroundTransparency = 1.000
 TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_9.BorderSizePixel = 0
-TextLabel_9.Position = UDim2.new(0, 0, 0.42899999, 0)
+TextLabel_9.Position = UDim2.new(0, 0, 0.401176751, 0)
 TextLabel_9.Size = UDim2.new(0, 203, 0, 23)
 TextLabel_9.Font = Enum.Font.Merriweather
 TextLabel_9.Text = "Offscreen Arrow"
@@ -381,7 +386,7 @@ TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.BackgroundTransparency = 1.000
 TextLabel_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_10.BorderSizePixel = 0
-TextLabel_10.Position = UDim2.new(0, 0, 0.47935766, 0)
+TextLabel_10.Position = UDim2.new(0, 0, 0.449897766, 0)
 TextLabel_10.Size = UDim2.new(0, 203, 0, 23)
 TextLabel_10.Font = Enum.Font.Merriweather
 TextLabel_10.Text = "Tracers"
@@ -400,24 +405,24 @@ Button_16.Text = ""
 Button_16.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button_16.TextSize = 14.000
 
-movesped.Name = "movesped"
-movesped.Parent = Assets
-movesped.AnchorPoint = Vector2.new(0.5, 0.5)
-movesped.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-movesped.BackgroundTransparency = 1.000
-movesped.BorderColor3 = Color3.fromRGB(0, 0, 0)
-movesped.BorderSizePixel = 0
-movesped.Position = UDim2.new(0.214566931, 0, 0.705258012, 0)
-movesped.Size = UDim2.new(0, 101, 0, 18)
-movesped.Font = Enum.Font.Merriweather
-movesped.Text = "WalkSpeed = 16"
-movesped.TextColor3 = Color3.fromRGB(255, 255, 255)
-movesped.TextScaled = true
-movesped.TextSize = 14.000
-movesped.TextWrapped = true
+step.Name = "step"
+step.Parent = Assets
+step.AnchorPoint = Vector2.new(0.5, 0.5)
+step.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+step.BackgroundTransparency = 1.000
+step.BorderColor3 = Color3.fromRGB(0, 0, 0)
+step.BorderSizePixel = 0
+step.Position = UDim2.new(0.246062994, 0, 0.895541549, 0)
+step.Size = UDim2.new(0, 101, 0, 18)
+step.Font = Enum.Font.Merriweather
+step.Text = "Step Distance = 3"
+step.TextColor3 = Color3.fromRGB(255, 255, 255)
+step.TextScaled = true
+step.TextSize = 14.000
+step.TextWrapped = true
 
 Button_17.Name = "Button"
-Button_17.Parent = movesped
+Button_17.Parent = step
 Button_17.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
 Button_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Button_17.Position = UDim2.new(0.0434238687, 0, 0.981808126, 0)
@@ -428,7 +433,7 @@ Button_17.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button_17.TextSize = 14.000
 
 Button_18.Name = "Button"
-Button_18.Parent = movesped
+Button_18.Parent = step
 Button_18.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
 Button_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Button_18.Position = UDim2.new(0.528804719, 0, 0.983103454, 0)
@@ -438,41 +443,103 @@ Button_18.Text = "+"
 Button_18.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button_18.TextSize = 14.000
 
+TextLabel_11.Parent = Assets
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_11.BorderSizePixel = 0
+TextLabel_11.Position = UDim2.new(0.0354330726, 0, 0.891796231, 0)
+TextLabel_11.Size = UDim2.new(0, 203, 0, 23)
+TextLabel_11.Font = Enum.Font.Merriweather
+TextLabel_11.Text = "Step Enabled"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextSize = 14.000
+TextLabel_11.TextXAlignment = Enum.TextXAlignment.Right
+
+Button_19.Name = "Button"
+Button_19.Parent = TextLabel_11
+Button_19.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
+Button_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_19.Position = UDim2.new(1.02775383, 0, -0.0182030722, 0)
+Button_19.Size = UDim2.new(0, 23, 0, 23)
+Button_19.Font = Enum.Font.Merriweather
+Button_19.Text = ""
+Button_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button_19.TextSize = 14.000
+
+aimbot.Name = "aimbot"
+aimbot.Parent = Assets
+aimbot.AnchorPoint = Vector2.new(0.5, 0.5)
+aimbot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+aimbot.BackgroundTransparency = 1.000
+aimbot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+aimbot.BorderSizePixel = 0
+aimbot.Position = UDim2.new(0.234251961, 0, 0.669682324, 0)
+aimbot.Size = UDim2.new(0, 101, 0, 18)
+aimbot.Font = Enum.Font.Merriweather
+aimbot.Text = "Aimbot Sensitivity = 3"
+aimbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+aimbot.TextScaled = true
+aimbot.TextSize = 14.000
+aimbot.TextWrapped = true
+
+Button_20.Name = "Button"
+Button_20.Parent = aimbot
+Button_20.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
+Button_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_20.Position = UDim2.new(0.0434238687, 0, 0.981808126, 0)
+Button_20.Size = UDim2.new(0.395495266, 0, 0, 23)
+Button_20.Font = Enum.Font.Merriweather
+Button_20.Text = "-"
+Button_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button_20.TextSize = 14.000
+
+Button_21.Name = "Button"
+Button_21.Parent = aimbot
+Button_21.BackgroundColor3 = Color3.fromRGB(71, 100, 86)
+Button_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_21.Position = UDim2.new(0.528804719, 0, 0.983103454, 0)
+Button_21.Size = UDim2.new(0.395495266, 0, 0, 23)
+Button_21.Font = Enum.Font.Merriweather
+Button_21.Text = "+"
+Button_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button_21.TextSize = 14.000
+
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(43, 57, 50)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(24, 31, 27))}
 UIGradient.Rotation = 90
 UIGradient.Parent = Main
 
 -- Scripts:
 
-local function AARNWGC_fake_script() -- TextLabel.LocalScript 
+local function HJAD_fake_script() -- TextLabel.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel)
 
 	script.Parent.Text = "Hello: " .. game.Players.LocalPlayer.Name 
 end
-coroutine.wrap(AARNWGC_fake_script)()
-local function EOHBL_fake_script() -- Button.LocalScript 
+coroutine.wrap(HJAD_fake_script)()
+local function AWGC_fake_script() -- Button.LocalScript 
 	local script = Instance.new('LocalScript', Button)
 
 	local button = script.Parent 
 	local RunService = game:GetService("RunService")
 	button.MouseButton1Down:Connect(function()
-		_G.Destroy = true
-		_G.AimbotEnabled = false
-		_G.StickyAimEnabled = false
-		button.Parent.Parent:Remove()
-
+	_G.Destroy = true
+	_G.AimbotEnabled = false
+	_G.StickyAimEnabled = false
+	button.Parent.Parent:Remove()
+	
 	end)
 end
-coroutine.wrap(EOHBL_fake_script)()
-local function OVKNFVT_fake_script() -- Button_2.LocalScript 
+coroutine.wrap(AWGC_fake_script)()
+local function KPIO_fake_script() -- Button_2.LocalScript 
 	local script = Instance.new('LocalScript', Button_2)
 
 	local button = script.Parent 
 	local RunService = game:GetService("RunService")
 	button.MouseButton1Down:Connect(function()
 		local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/main/UniversalSkeleton.lua"))()
-
-
+	
+	
 		local Skeletons = {}
 		for _, Player in next, game.Players:GetChildren() do
 			table.insert(Skeletons, Library:NewSkeleton(Player, true));
@@ -482,8 +549,8 @@ local function OVKNFVT_fake_script() -- Button_2.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(OVKNFVT_fake_script)()
-local function KMTHFQC_fake_script() -- Button_3.LocalScript 
+coroutine.wrap(KPIO_fake_script)()
+local function YSNNPE_fake_script() -- Button_3.LocalScript 
 	local script = Instance.new('LocalScript', Button_3)
 
 	local button = script.Parent 
@@ -492,8 +559,8 @@ local function KMTHFQC_fake_script() -- Button_3.LocalScript
 		_G.AimbotPart = "Head" 
 	end)
 end
-coroutine.wrap(KMTHFQC_fake_script)()
-local function SOTYXSO_fake_script() -- Button_4.LocalScript 
+coroutine.wrap(YSNNPE_fake_script)()
+local function LRFRFBD_fake_script() -- Button_4.LocalScript 
 	local script = Instance.new('LocalScript', Button_4)
 
 	local button = script.Parent 
@@ -502,206 +569,15 @@ local function SOTYXSO_fake_script() -- Button_4.LocalScript
 		_G.AimbotPart = "HumanoidRootPart" 
 	end)
 end
-coroutine.wrap(SOTYXSO_fake_script)()
-local function QMNFI_fake_script() -- Button_5.LocalScript 
+coroutine.wrap(LRFRFBD_fake_script)()
+local function JOWLVAN_fake_script() -- Button_5.LocalScript 
 	local script = Instance.new('LocalScript', Button_5)
 
 	local Button = script.Parent
 	local toggleactive = true
 	local ESPConnections = {}
 	_G.Speed = 3
-
-	local function active()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-		local Button = script.Parent
-		local toggleactive = true
-		local ESPConnections = {}
-		_G.Speed = 3
-
-		local function active()
-			local cam = workspace.CurrentCamera
-			local UIS = game:GetService("UserInputService")
-			local RS = game:GetService("RunService")
-			local onMobile = not UIS.KeyboardEnabled
-			local keysDown = {}
-			local rotating = false
-			local renderStepConnection
-			local inputBeganConnection
-			local inputEndedConnection
-			local touchMovedConnection
-
-			if not game:IsLoaded() then game.Loaded:Wait() end
-
-			cam.CameraType = Enum.CameraType.Scriptable
-
-
-			local sens = .3 
-			if onMobile then sens *= 2 end
-
-			local function renderStepped()
-				if rotating then
-					local delta = UIS:GetMouseDelta()
-					local cf = cam.CFrame
-					local yAngle = cf:ToEulerAngles(Enum.RotationOrder.YZX)
-					local newAmount = math.deg(yAngle) + delta.Y
-					if newAmount > 65 or newAmount < -65 then
-						if not (yAngle < 0 and delta.Y < 0) and not (yAngle > 0 and delta.Y > 0) then
-							delta = Vector2.new(delta.X, 0)
-						end
-					end
-					cf *= CFrame.Angles(-math.rad(delta.Y), 0, 0)
-					cf = CFrame.Angles(0, -math.rad(delta.X), 0) * (cf - cf.Position) + cf.Position
-					cf = CFrame.lookAt(cf.Position, cf.Position + cf.LookVector)
-					if delta ~= Vector2.new(0, 0) then cam.CFrame = cam.CFrame:Lerp(cf, sens) end
-					UIS.MouseBehavior = Enum.MouseBehavior.LockCurrentPosition
-				else
-					UIS.MouseBehavior = Enum.MouseBehavior.Default
-				end
-
-				if keysDown["Enum.KeyCode.W"] then
-					cam.CFrame *= CFrame.new(Vector3.new(0, 0, -_G.Speed))
-				end
-				if keysDown["Enum.KeyCode.A"] then
-					cam.CFrame *= CFrame.new(Vector3.new(-_G.Speed, 0, 0))
-				end
-				if keysDown["Enum.KeyCode.S"] then
-					cam.CFrame *= CFrame.new(Vector3.new(0, 0, _G.Speed))
-				end
-				if keysDown["Enum.KeyCode.D"] then
-					cam.CFrame *= CFrame.new(Vector3.new(_G.Speed, 0, 0))
-				end
-			end
-
-			renderStepConnection = RS.RenderStepped:Connect(renderStepped)
-
-			local validKeys = {"Enum.KeyCode.W", "Enum.KeyCode.A", "Enum.KeyCode.S", "Enum.KeyCode.D"}
-
-			inputBeganConnection = UIS.InputBegan:Connect(function(Input)
-				for i, key in pairs(validKeys) do
-					if key == tostring(Input.KeyCode) then
-						keysDown[key] = true
-					end
-				end
-				if Input.UserInputType == Enum.UserInputType.MouseButton2 or (Input.UserInputType == Enum.UserInputType.Touch and UIS:GetMouseLocation().X > (cam.ViewportSize.X / 2)) then
-					rotating = true
-				end
-				if Input.UserInputType == Enum.UserInputType.Touch then
-					if Input.Position.X < cam.ViewportSize.X / 2 then
-						touchPos = Input.Position
-					end
-				end
-			end)
-
-			inputEndedConnection = UIS.InputEnded:Connect(function(Input)
-				for key, v in pairs(keysDown) do
-					if key == tostring(Input.KeyCode) then
-						keysDown[key] = false
-					end
-				end
-				if Input.UserInputType == Enum.UserInputType.MouseButton2 or (Input.UserInputType == Enum.UserInputType.Touch and UIS:GetMouseLocation().X > (cam.ViewportSize.X / 2)) then
-					rotating = false
-				end
-				if Input.UserInputType == Enum.UserInputType.Touch and touchPos then
-					if Input.Position.X < cam.ViewportSize.X / 2 then
-						touchPos = nil
-						keysDown["Enum.KeyCode.W"] = false
-						keysDown["Enum.KeyCode.A"] = false
-						keysDown["Enum.KeyCode.S"] = false
-						keysDown["Enum.KeyCode.D"] = false
-					end
-				end
-			end)
-
-			touchMovedConnection = UIS.TouchMoved:Connect(function(input)
-				if touchPos then
-					if input.Position.X < cam.ViewportSize.X / 2 then
-						if input.Position.Y < touchPos.Y then
-							keysDown["Enum.KeyCode.W"] = true
-							keysDown["Enum.KeyCode.S"] = false
-						else
-							keysDown["Enum.KeyCode.W"] = false
-							keysDown["Enum.KeyCode.S"] = true
-						end
-						if input.Position.X < (touchPos.X - 15) then
-							keysDown["Enum.KeyCode.A"] = true
-							keysDown["Enum.KeyCode.D"] = false
-						elseif input.Position.X > (touchPos.X + 15) then
-							keysDown["Enum.KeyCode.A"] = false
-							keysDown["Enum.KeyCode.D"] = true
-						else
-							keysDown["Enum.KeyCode.A"] = false
-							keysDown["Enum.KeyCode.D"] = false
-						end
-					end
-				end
-			end)
-
-			-- Store connections in ESPConnections for later disconnection
-			table.insert(ESPConnections, renderStepConnection)
-			table.insert(ESPConnections, inputBeganConnection)
-			table.insert(ESPConnections, inputEndedConnection)
-			table.insert(ESPConnections, touchMovedConnection)
-		end
-
-		local function unactive()
-			for _, connection in ipairs(ESPConnections) do
-				connection:Disconnect()
-			end
-			ESPConnections = {}
-
-			local cam = workspace.CurrentCamera
-			cam.CameraType = Enum.CameraType.Custom
-			cam.FieldOfView = 70  -- Reset to default FOV
-		end
-
-		Button.MouseButton1Down:Connect(function()
-			if toggleactive then
-				toggleactive = false
-				active()
-				Button.BackgroundColor3 = Color3.new(0.45098, 0.00392157, 1) -- Color in 0-1 range
-			else
-				toggleactive = true
-				unactive()
-				Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
-			end
-		end)
-
-	end
-
-	local function unactive()
-		for _, connection in ipairs(ESPConnections) do
-			connection:Disconnect()
-		end
-		ESPConnections = {}
-
-		local cam = workspace.CurrentCamera
-		cam.CameraType = Enum.CameraType.Custom
-		cam.FieldOfView = 70  -- Reset to default FOV
-		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-	end
-
-	Button.MouseButton1Down:Connect(function()
-		if toggleactive then
-			toggleactive = false
-			active()
-			Button.BackgroundColor3 = Color3.new(0.45098, 0.00392157, 1) -- Color in 0-1 range
-		else
-			toggleactive = true
-			unactive()
-			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
-		end
-	end)
-
-end
-coroutine.wrap(QMNFI_fake_script)()
-local function XDSIKRJ_fake_script() -- Button_6.LocalScript 
-	local script = Instance.new('LocalScript', Button_6)
-
-	local Button = script.Parent
-	local toggleactive = true
-	local ESPConnections = {}
-	_G.Speed = 3
-
+	
 	local function active()
 		local cam = workspace.CurrentCamera
 		local UIS = game:GetService("UserInputService")
@@ -713,17 +589,14 @@ local function XDSIKRJ_fake_script() -- Button_6.LocalScript
 		local inputBeganConnection
 		local inputEndedConnection
 		local touchMovedConnection
-
+	
 		if not game:IsLoaded() then game.Loaded:Wait() end
-
+	
 		cam.CameraType = Enum.CameraType.Scriptable
-
-
-		local sens = .3
-
-		_G.Speed /= 10
+	
+		local sens = .3 
 		if onMobile then sens *= 2 end
-
+	
 		local function renderStepped()
 			if rotating then
 				local delta = UIS:GetMouseDelta()
@@ -743,25 +616,29 @@ local function XDSIKRJ_fake_script() -- Button_6.LocalScript
 			else
 				UIS.MouseBehavior = Enum.MouseBehavior.Default
 			end
-
+	
+			local moveVector = Vector3.new(0, 0, 0)
 			if keysDown["Enum.KeyCode.W"] then
-				cam.CFrame *= CFrame.new(Vector3.new(0, 0, -_G.Speed))
+				moveVector += cam.CFrame.LookVector * _G.Speed
 			end
 			if keysDown["Enum.KeyCode.A"] then
-				cam.CFrame *= CFrame.new(Vector3.new(-_G.Speed, 0, 0))
+				moveVector -= cam.CFrame.RightVector * _G.Speed
 			end
 			if keysDown["Enum.KeyCode.S"] then
-				cam.CFrame *= CFrame.new(Vector3.new(0, 0, _G.Speed))
+				moveVector -= cam.CFrame.LookVector * _G.Speed
 			end
 			if keysDown["Enum.KeyCode.D"] then
-				cam.CFrame *= CFrame.new(Vector3.new(_G.Speed, 0, 0))
+				moveVector += cam.CFrame.RightVector * _G.Speed
+			end
+			if moveVector.Magnitude > 0 then
+				cam.CFrame = cam.CFrame + moveVector
 			end
 		end
-
+	
 		renderStepConnection = RS.RenderStepped:Connect(renderStepped)
-
+	
 		local validKeys = {"Enum.KeyCode.W", "Enum.KeyCode.A", "Enum.KeyCode.S", "Enum.KeyCode.D"}
-
+	
 		inputBeganConnection = UIS.InputBegan:Connect(function(Input)
 			for i, key in pairs(validKeys) do
 				if key == tostring(Input.KeyCode) then
@@ -777,7 +654,7 @@ local function XDSIKRJ_fake_script() -- Button_6.LocalScript
 				end
 			end
 		end)
-
+	
 		inputEndedConnection = UIS.InputEnded:Connect(function(Input)
 			for key, v in pairs(keysDown) do
 				if key == tostring(Input.KeyCode) then
@@ -797,7 +674,7 @@ local function XDSIKRJ_fake_script() -- Button_6.LocalScript
 				end
 			end
 		end)
-
+	
 		touchMovedConnection = UIS.TouchMoved:Connect(function(input)
 			if touchPos then
 				if input.Position.X < cam.ViewportSize.X / 2 then
@@ -821,25 +698,25 @@ local function XDSIKRJ_fake_script() -- Button_6.LocalScript
 				end
 			end
 		end)
-
+	
 		-- Store connections in ESPConnections for later disconnection
 		table.insert(ESPConnections, renderStepConnection)
 		table.insert(ESPConnections, inputBeganConnection)
 		table.insert(ESPConnections, inputEndedConnection)
 		table.insert(ESPConnections, touchMovedConnection)
 	end
-
+	
 	local function unactive()
 		for _, connection in ipairs(ESPConnections) do
 			connection:Disconnect()
 		end
 		ESPConnections = {}
-
+	
 		local cam = workspace.CurrentCamera
 		cam.CameraType = Enum.CameraType.Custom
 		cam.FieldOfView = 70  -- Reset to default FOV
 	end
-
+	
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -851,24 +728,184 @@ local function XDSIKRJ_fake_script() -- Button_6.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-
+	
 end
-coroutine.wrap(XDSIKRJ_fake_script)()
-local function UDWNOM_fake_script() -- Button_7.LocalScript 
+coroutine.wrap(JOWLVAN_fake_script)()
+local function KNVJQI_fake_script() -- Button_6.LocalScript 
+	local script = Instance.new('LocalScript', Button_6)
+
+	local Button = script.Parent
+	local toggleactive = true
+	local ESPConnections = {}
+	_G.Speed = 3
+	
+	local function active()
+		local cam = workspace.CurrentCamera
+		local UIS = game:GetService("UserInputService")
+		local RS = game:GetService("RunService")
+		local onMobile = not UIS.KeyboardEnabled
+		local keysDown = {}
+		local rotating = false
+		local renderStepConnection
+		local inputBeganConnection
+		local inputEndedConnection
+		local touchMovedConnection
+	
+		if not game:IsLoaded() then game.Loaded:Wait() end
+	
+		cam.CameraType = Enum.CameraType.Scriptable
+	
+		
+		local sens = .3
+	
+		_G.Speed /= 10
+		if onMobile then sens *= 2 end
+	
+		local function renderStepped()
+			if rotating then
+				local delta = UIS:GetMouseDelta()
+				local cf = cam.CFrame
+				local yAngle = cf:ToEulerAngles(Enum.RotationOrder.YZX)
+				local newAmount = math.deg(yAngle) + delta.Y
+				if newAmount > 65 or newAmount < -65 then
+					if not (yAngle < 0 and delta.Y < 0) and not (yAngle > 0 and delta.Y > 0) then
+						delta = Vector2.new(delta.X, 0)
+					end
+				end
+				cf *= CFrame.Angles(-math.rad(delta.Y), 0, 0)
+				cf = CFrame.Angles(0, -math.rad(delta.X), 0) * (cf - cf.Position) + cf.Position
+				cf = CFrame.lookAt(cf.Position, cf.Position + cf.LookVector)
+				if delta ~= Vector2.new(0, 0) then cam.CFrame = cam.CFrame:Lerp(cf, sens) end
+				UIS.MouseBehavior = Enum.MouseBehavior.LockCurrentPosition
+			else
+				UIS.MouseBehavior = Enum.MouseBehavior.Default
+			end
+	
+			if keysDown["Enum.KeyCode.W"] then
+				cam.CFrame *= CFrame.new(Vector3.new(0, 0, -_G.Speed))
+			end
+			if keysDown["Enum.KeyCode.A"] then
+				cam.CFrame *= CFrame.new(Vector3.new(-_G.Speed, 0, 0))
+			end
+			if keysDown["Enum.KeyCode.S"] then
+				cam.CFrame *= CFrame.new(Vector3.new(0, 0, _G.Speed))
+			end
+			if keysDown["Enum.KeyCode.D"] then
+				cam.CFrame *= CFrame.new(Vector3.new(_G.Speed, 0, 0))
+			end
+		end
+	
+		renderStepConnection = RS.RenderStepped:Connect(renderStepped)
+	
+		local validKeys = {"Enum.KeyCode.W", "Enum.KeyCode.A", "Enum.KeyCode.S", "Enum.KeyCode.D"}
+	
+		inputBeganConnection = UIS.InputBegan:Connect(function(Input)
+			for i, key in pairs(validKeys) do
+				if key == tostring(Input.KeyCode) then
+					keysDown[key] = true
+				end
+			end
+			if Input.UserInputType == Enum.UserInputType.MouseButton2 or (Input.UserInputType == Enum.UserInputType.Touch and UIS:GetMouseLocation().X > (cam.ViewportSize.X / 2)) then
+				rotating = true
+			end
+			if Input.UserInputType == Enum.UserInputType.Touch then
+				if Input.Position.X < cam.ViewportSize.X / 2 then
+					touchPos = Input.Position
+				end
+			end
+		end)
+	
+		inputEndedConnection = UIS.InputEnded:Connect(function(Input)
+			for key, v in pairs(keysDown) do
+				if key == tostring(Input.KeyCode) then
+					keysDown[key] = false
+				end
+			end
+			if Input.UserInputType == Enum.UserInputType.MouseButton2 or (Input.UserInputType == Enum.UserInputType.Touch and UIS:GetMouseLocation().X > (cam.ViewportSize.X / 2)) then
+				rotating = false
+			end
+			if Input.UserInputType == Enum.UserInputType.Touch and touchPos then
+				if Input.Position.X < cam.ViewportSize.X / 2 then
+					touchPos = nil
+					keysDown["Enum.KeyCode.W"] = false
+					keysDown["Enum.KeyCode.A"] = false
+					keysDown["Enum.KeyCode.S"] = false
+					keysDown["Enum.KeyCode.D"] = false
+				end
+			end
+		end)
+	
+		touchMovedConnection = UIS.TouchMoved:Connect(function(input)
+			if touchPos then
+				if input.Position.X < cam.ViewportSize.X / 2 then
+					if input.Position.Y < touchPos.Y then
+						keysDown["Enum.KeyCode.W"] = true
+						keysDown["Enum.KeyCode.S"] = false
+					else
+						keysDown["Enum.KeyCode.W"] = false
+						keysDown["Enum.KeyCode.S"] = true
+					end
+					if input.Position.X < (touchPos.X - 15) then
+						keysDown["Enum.KeyCode.A"] = true
+						keysDown["Enum.KeyCode.D"] = false
+					elseif input.Position.X > (touchPos.X + 15) then
+						keysDown["Enum.KeyCode.A"] = false
+						keysDown["Enum.KeyCode.D"] = true
+					else
+						keysDown["Enum.KeyCode.A"] = false
+						keysDown["Enum.KeyCode.D"] = false
+					end
+				end
+			end
+		end)
+	
+		-- Store connections in ESPConnections for later disconnection
+		table.insert(ESPConnections, renderStepConnection)
+		table.insert(ESPConnections, inputBeganConnection)
+		table.insert(ESPConnections, inputEndedConnection)
+		table.insert(ESPConnections, touchMovedConnection)
+	end
+	
+	local function unactive()
+		for _, connection in ipairs(ESPConnections) do
+			connection:Disconnect()
+		end
+		ESPConnections = {}
+	
+		local cam = workspace.CurrentCamera
+		cam.CameraType = Enum.CameraType.Custom
+		cam.FieldOfView = 70  -- Reset to default FOV
+	end
+	
+	Button.MouseButton1Down:Connect(function()
+		if toggleactive then
+			toggleactive = false
+			active()
+			Button.BackgroundColor3 = Color3.new(0.45098, 0.00392157, 1) -- Color in 0-1 range
+		else
+			toggleactive = true
+			unactive()
+			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
+		end
+	end)
+	
+end
+coroutine.wrap(KNVJQI_fake_script)()
+local function BQKRQ_fake_script() -- Button_7.LocalScript 
 	local script = Instance.new('LocalScript', Button_7)
 
 	local Button = script.Parent
 	local toggleactive = true
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Dvyct/NYXbot/main/main.lua"))()
-
+	
 	local function active()
 		_G.AimbotEnabled = true
 	end
-
+	
 	local function unactive()
 		_G.AimbotEnabled = false
 	end
-
+	
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -880,23 +917,23 @@ local function UDWNOM_fake_script() -- Button_7.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-
+	
 end
-coroutine.wrap(UDWNOM_fake_script)()
-local function DFYB_fake_script() -- Button_8.LocalScript 
+coroutine.wrap(BQKRQ_fake_script)()
+local function ZIXD_fake_script() -- Button_8.LocalScript 
 	local script = Instance.new('LocalScript', Button_8)
 
 	local Button = script.Parent
 	local toggleactive = true
-
+	
 	local function active()
 		_G.StickyAimEnabled = true
 	end
-
+	
 	local function unactive()
 		_G.StickyAimEnabled = false
 	end
-
+	
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -908,10 +945,10 @@ local function DFYB_fake_script() -- Button_8.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-
+	
 end
-coroutine.wrap(DFYB_fake_script)()
-local function SQDTJ_fake_script() -- sped.LocalScript 
+coroutine.wrap(ZIXD_fake_script)()
+local function IVCH_fake_script() -- sped.LocalScript 
 	local script = Instance.new('LocalScript', sped)
 
 	local Run = game:GetService("RunService")
@@ -919,8 +956,8 @@ local function SQDTJ_fake_script() -- sped.LocalScript
 		script.Parent.Text = "Freecam Speed = " .. tostring(tonumber(_G.Speed))
 	end)
 end
-coroutine.wrap(SQDTJ_fake_script)()
-local function ZVUJPM_fake_script() -- Button_9.LocalScript 
+coroutine.wrap(IVCH_fake_script)()
+local function SKHR_fake_script() -- Button_9.LocalScript 
 	local script = Instance.new('LocalScript', Button_9)
 
 	local button = script.Parent 
@@ -929,18 +966,18 @@ local function ZVUJPM_fake_script() -- Button_9.LocalScript
 		_G.Speed = _G.Speed - 0.1
 	end)
 end
-coroutine.wrap(ZVUJPM_fake_script)()
-local function FQOTUCT_fake_script() -- Button_10.LocalScript 
+coroutine.wrap(SKHR_fake_script)()
+local function TVDUP_fake_script() -- Button_10.LocalScript 
 	local script = Instance.new('LocalScript', Button_10)
 
 	local button = script.Parent 
 	local RunService = game:GetService("RunService")
 	button.MouseButton1Down:Connect(function()
-		_G.Speed = _G.Speed + 0.1
+	   _G.Speed = _G.Speed + 0.1
 	end)
 end
-coroutine.wrap(FQOTUCT_fake_script)()
-local function MPLRIK_fake_script() -- Button_11.LocalScript 
+coroutine.wrap(TVDUP_fake_script)()
+local function MGLT_fake_script() -- Button_11.LocalScript 
 	local script = Instance.new('LocalScript', Button_11)
 
 	local Button = script.Parent
@@ -950,7 +987,7 @@ local function MPLRIK_fake_script() -- Button_11.LocalScript
 	local function active()
 		Sense.teamSettings.enemy.enabled = true
 	end
-
+	
 	local function unactive()
 		Sense.teamSettings.enemy.enabled = false
 	end
@@ -958,42 +995,42 @@ local function MPLRIK_fake_script() -- Button_11.LocalScript
 	Run.RenderStepped:Connect(function()
 		if _G.Tracers == true then
 			Sense.teamSettings.enemy.tracer = true
-		else 
+	else 
 			Sense.teamSettings.enemy.tracer = false
-
-		end
-
-		if _G.Boxes == true then
+	
+	end
+	
+	if _G.Boxes == true then
 			Sense.teamSettings.enemy.box3d = true
-		else 
+	else 
 			Sense.teamSettings.enemy.box3d = false
-		end
-
-		if _G.Names == true then
+	end
+	
+	if _G.Names == true then
 			Sense.teamSettings.enemy.name = true
-		else
+	else
 			Sense.teamSettings.enemy.name = false
-		end
-
-		if _G.HealthBar == true then
+	end
+	
+	if _G.HealthBar == true then
 			Sense.teamSettings.enemy.healthBar = true
-		else
+	else
 			Sense.teamSettings.enemy.healthBar = false
-		end
-
-		if _G.Arrows == true then
+	end
+	
+	if _G.Arrows == true then
 			Sense.teamSettings.enemy.offScreenArrow = true
-		else
+	else
 			Sense.teamSettings.enemy.offScreenArrow = false
-		end 
+	end 
 		if _G.Destroy == true then
 			Sense.Unload() 
 		end 
 	end)
-
-
-
-
+	
+	
+	
+	
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -1005,23 +1042,23 @@ local function MPLRIK_fake_script() -- Button_11.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-
+	
 end
-coroutine.wrap(MPLRIK_fake_script)()
-local function HYRBOK_fake_script() -- Button_12.LocalScript 
+coroutine.wrap(MGLT_fake_script)()
+local function GHWKGJ_fake_script() -- Button_12.LocalScript 
 	local script = Instance.new('LocalScript', Button_12)
 
 	local Button = script.Parent
 	local toggleactive = true
-
+	
 	local function active()
 		_G.Boxes = true
 	end
-
+	
 	local function unactive()
 		_G.Boxes = false
 	end
-
+	
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -1033,23 +1070,23 @@ local function HYRBOK_fake_script() -- Button_12.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-
+	
 end
-coroutine.wrap(HYRBOK_fake_script)()
-local function SDDSXD_fake_script() -- Button_13.LocalScript 
+coroutine.wrap(GHWKGJ_fake_script)()
+local function IVVBQFX_fake_script() -- Button_13.LocalScript 
 	local script = Instance.new('LocalScript', Button_13)
 
 	local Button = script.Parent
 	local toggleactive = true
-
+	
 	local function active()
 		_G.HealthBar = true
 	end
-
+	
 	local function unactive()
 		_G.HealthBar = false
 	end
-
+	
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -1061,23 +1098,23 @@ local function SDDSXD_fake_script() -- Button_13.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-
+	
 end
-coroutine.wrap(SDDSXD_fake_script)()
-local function MUYO_fake_script() -- Button_14.LocalScript 
+coroutine.wrap(IVVBQFX_fake_script)()
+local function DEGZVVJ_fake_script() -- Button_14.LocalScript 
 	local script = Instance.new('LocalScript', Button_14)
 
 	local Button = script.Parent
 	local toggleactive = true
-
+	
 	local function active()
 		_G.Names = true
 	end
-
+	
 	local function unactive()
 		_G.Names = false
 	end
-
+	
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -1089,23 +1126,23 @@ local function MUYO_fake_script() -- Button_14.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-
+	
 end
-coroutine.wrap(MUYO_fake_script)()
-local function QVBERN_fake_script() -- Button_15.LocalScript 
+coroutine.wrap(DEGZVVJ_fake_script)()
+local function LLDGYRE_fake_script() -- Button_15.LocalScript 
 	local script = Instance.new('LocalScript', Button_15)
 
 	local Button = script.Parent
 	local toggleactive = true
-
+	
 	local function active()
 		_G.Arrows = true
 	end
-
+	
 	local function unactive()
 		_G.Arrows = false
 	end
-
+	
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -1117,23 +1154,23 @@ local function QVBERN_fake_script() -- Button_15.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-
+	
 end
-coroutine.wrap(QVBERN_fake_script)()
-local function PUBKHIE_fake_script() -- Button_16.LocalScript 
+coroutine.wrap(LLDGYRE_fake_script)()
+local function AXLIVYP_fake_script() -- Button_16.LocalScript 
 	local script = Instance.new('LocalScript', Button_16)
 
 	local Button = script.Parent
 	local toggleactive = true
-
+	
 	local function active()
 		_G.Tracers = true
 	end
-
+	
 	local function unactive()
 		_G.Tracers = false
 	end
-
+	
 	Button.MouseButton1Down:Connect(function()
 		if toggleactive then
 			toggleactive = false
@@ -1145,82 +1182,134 @@ local function PUBKHIE_fake_script() -- Button_16.LocalScript
 			Button.BackgroundColor3 = Color3.new(71 / 255, 100 / 255, 86 / 255) -- Converted to 0-1 range
 		end
 	end)
-
+	
 end
-coroutine.wrap(PUBKHIE_fake_script)()
-local function FKOJUTY_fake_script() -- movesped.LocalScript 
-	local script = Instance.new('LocalScript', movesped)
+coroutine.wrap(AXLIVYP_fake_script)()
+local function CLTIO_fake_script() -- step.LocalScript 
+	local script = Instance.new('LocalScript', step)
 
 	local Run = game:GetService("RunService")
-
-	local Players = game:GetService("Players")
-	local RunService = game:GetService("RunService")
-	local UserInputService = game:GetService("UserInputService")
-
-	local player = Players.LocalPlayer
-	local character = player.Character or player.CharacterAdded:Wait()
-	local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-
-	_G.WSpeed = 0 -- Initial bonus to walk speed
-
-	local moveDirection = Vector3.new(0, 0, 0)
-
-	-- Function to update move direction based on input
-	local function updateMoveDirection()
-		local direction = Vector3.new(0, 0, 0)
-		if UserInputService:IsKeyDown(Enum.KeyCode.W) then
-			direction += humanoidRootPart.CFrame.LookVector
-		end
-		if UserInputService:IsKeyDown(Enum.KeyCode.S) then
-			direction -= humanoidRootPart.CFrame.LookVector
-		end
-		if UserInputService:IsKeyDown(Enum.KeyCode.A) then
-
-			direction -= humanoidRootPart.CFrame.RightVector
-		end
-		if UserInputService:IsKeyDown(Enum.KeyCode.D) then
-
-			direction += humanoidRootPart.CFrame.RightVector
-		end
-		moveDirection = direction
-	end
-
-	-- Connect input events to update move direction
-	UserInputService.InputBegan:Connect(updateMoveDirection)
-	UserInputService.InputEnded:Connect(updateMoveDirection)
-
-	-- Main loop to update character's position
-	RunService.Stepped:Connect(function()
-		updateMoveDirection() -- Ensure moveDirection is up-to-date
-		if moveDirection.Magnitude > 0 then
-			moveDirection = moveDirection.Unit * (_G.WSpeed * RunService.Heartbeat:Wait()) -- Use Heartbeat to adjust speed based on frame rate
-			humanoidRootPart.CFrame = humanoidRootPart.CFrame + moveDirection
-		end
-	end)
-
-
 	Run.RenderStepped:Connect(function()
-		script.Parent.Text = "WalkSpeed = " .. tostring(tonumber(_G.WSpeed)+ 16)
+		script.Parent.Text = "Step Distance = " .. tostring(tonumber(_G.StepD))
 	end)
 end
-coroutine.wrap(FKOJUTY_fake_script)()
-local function STHC_fake_script() -- Button_17.LocalScript 
+coroutine.wrap(CLTIO_fake_script)()
+local function YNMY_fake_script() -- Button_17.LocalScript 
 	local script = Instance.new('LocalScript', Button_17)
 
 	local button = script.Parent 
 	local RunService = game:GetService("RunService")
+	_G.StepD = 3
 	button.MouseButton1Down:Connect(function()
-		_G.WSpeed = _G.WSpeed - 0.1
+		_G.StepD = _G.StepD - 0.01
 	end)
 end
-coroutine.wrap(STHC_fake_script)()
-local function AEGR_fake_script() -- Button_18.LocalScript 
+coroutine.wrap(YNMY_fake_script)()
+local function UXOCLY_fake_script() -- Button_18.LocalScript 
 	local script = Instance.new('LocalScript', Button_18)
 
 	local button = script.Parent 
 	local RunService = game:GetService("RunService")
+	_G.StepD = 3
 	button.MouseButton1Down:Connect(function()
-		_G.WSpeed = _G.WSpeed + 0.1
+		_G.StepD = _G.StepD + 0.01
 	end)
 end
-coroutine.wrap(AEGR_fake_script)()
+coroutine.wrap(UXOCLY_fake_script)()
+local function YSVHL_fake_script() -- Button_19.LocalScript 
+	local script = Instance.new('LocalScript', Button_19)
+
+	local Button = script.Parent
+	local toggleactive = true
+	
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	local player = Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+	_G.StepD = 3
+	_G.StepHold = true
+	local moveForwardConnection
+	
+	-- Function to move the character forward by the specified distance
+	local function moveForward()
+		-- Get the current camera
+		local cam = workspace.CurrentCamera
+		-- Get the direction the camera is looking
+		local lookVector = cam.CFrame.LookVector
+		-- Move the humanoidRootPart forward in the direction the camera is looking
+		humanoidRootPart.CFrame = humanoidRootPart.CFrame + lookVector * _G.StepD
+	end
+	
+	-- Listen for the 'G' key press
+	UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+		if not gameProcessedEvent and not toggleactive then
+			if input.KeyCode == Enum.KeyCode.G then
+				if _G.StepHold then
+					moveForwardConnection = RunService.RenderStepped:Connect(moveForward)
+				else
+					moveForward()
+				end
+			end
+		end
+	end)
+	
+	-- Listen for the 'G' key release
+	UserInputService.InputEnded:Connect(function(input, gameProcessedEvent)
+		if input.KeyCode == Enum.KeyCode.G and moveForwardConnection then
+			moveForwardConnection:Disconnect()
+			moveForwardConnection = nil
+		end
+	end)
+	
+	Button.MouseButton1Down:Connect(function()
+		if toggleactive then
+			toggleactive = false
+			Button.BackgroundColor3 = Color3.new(0.45098, 0.00392157, 1) -- Color in 0-1 range
+		else
+			toggleactive = true
+			Button.BackgroundColor3 = Color3.new(0.278431, 0.392157, 0.337255) -- Converted to 0-1 range
+		end
+	end)
+	
+	-- Update references to the character and humanoidRootPart every second
+	RunService.RenderStepped:Connect(function()
+		wait(1)
+		player = Players.LocalPlayer
+		character = player.Character or player.CharacterAdded:Wait()
+		humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	end)
+	
+end
+coroutine.wrap(YSVHL_fake_script)()
+local function JTHXZ_fake_script() -- aimbot.LocalScript 
+	local script = Instance.new('LocalScript', aimbot)
+
+	local Run = game:GetService("RunService")
+	Run.RenderStepped:Connect(function()
+		script.Parent.Text = "Aimbot Sensitivity = " .. tostring(tonumber(_G.AimbotSensitivity))
+	end)
+end
+coroutine.wrap(JTHXZ_fake_script)()
+local function FUOE_fake_script() -- Button_20.LocalScript 
+	local script = Instance.new('LocalScript', Button_20)
+
+	local button = script.Parent 
+	local RunService = game:GetService("RunService")
+	button.MouseButton1Down:Connect(function()
+		_G.AimbotSensitivity = _G.AimbotSensitivity - 0.01
+	end)
+end
+coroutine.wrap(FUOE_fake_script)()
+local function YNNTFIM_fake_script() -- Button_21.LocalScript 
+	local script = Instance.new('LocalScript', Button_21)
+
+	local button = script.Parent 
+	local RunService = game:GetService("RunService")
+	button.MouseButton1Down:Connect(function()
+		_G.AimbotSensitivity = _G.AimbotSensitivity + 0.01
+	end)
+end
+coroutine.wrap(YNNTFIM_fake_script)()
